@@ -1,4 +1,22 @@
+body {
+    background-image: url("../img/Wall2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
 h1 {
     font-weight: bold;
-    color: chocolate;
+    font-size: 70px;
+    color: salmon;
+}
+
+.NavLink {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.jumbotronContainer {
+    height: 50vh;
 }
