@@ -1,8 +1,8 @@
 body {
     background-image: url("../img/Wall2.jpg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
 }
 
 
@@ -20,3 +20,57 @@ h1 {
 .jumbotronContainer {
     height: 50vh;
 }
+
+.bouncyBtn {
+    width: 60px;
+}
+
+.sloganText {
+
+}
+
+.arrowContainer {
+    height: 20vh;
+}
+
+.coloredTitle {
+    color: salmon;
+    letter-spacing: 4px;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.infoContainer {
+    margin-top: 35vh;
+    background-image: url("../img/TextSlogan.png");
+    height: 200px;
+
+    background-attachment: fixed;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    
+    background-size: 300px;
+}
+.coloredSubTitle {
+    color: black;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.cardsRow {
+    margin-top: 10vh;
+}
+.learningButton {
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+.cardImg {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: auto;
+    margin-top: 32px;
+}
+

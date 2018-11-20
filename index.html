@@ -10,10 +10,18 @@
     <!-- Here bootstrap is included to use their css code, it simplifies the creation of responsive websites.-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+
+    <!-- Importing some extra fonts. -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
     <link rel="stylesheet" href="css/index.css">
+
+    <!-- Importing library of animations. Used to simplify animation creation.-->
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
+    <!-- Nav element linked to classes from Bootstrap. -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#"><img src="img/Logo.png" style="width: 150px" class="img-responsive"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -29,7 +37,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        <span class="NavLink">Kurser</span> 
+                        <span class="NavLink">Kurser</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Livsmedel</a>
@@ -51,11 +59,78 @@
     </nav>
     <div class="jumbotronContainer d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="text-center">Vi lär dig <br>Hållbar utveckling!</h1>
+            <!-- Color animate this -->
+            <h1 class="text-center sloganText">Vi lär dig <br>Hållbar utveckling!</h1>
+        </div>
+    </div>
+    <div class="arrowContainer d-flex align-items-center">
+        <div class="container text-center">
+            <!-- Example use of animate.css below. We pass in parameters as: animated, infinite(loop) and bounce(type of animation)-->
+            <a href="#"><img src="img/arrowSalmon.png" class="img-responsive bouncyBtn animated infinite bounce"></a>
         </div>
     </div>
 
-
+    <div class="container-fluid infoContainer">
+        <div class="row">
+            <div class="offset-1 col-11">
+                <p class="coloredTitle">UTBILDNINGEN</p>
+            </div>
+            <div class="offset-1 col-11">
+                <h3 class="coloredSubTitle">Består av fyra delkurser</h3>
+            </div>
+        </div>
+        <div class="row cardsRow align-items-center">
+            <div class="col-12 col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top cardImg" src="img/008-gardening.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Livsmedel</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Läs mer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top cardImg" src="img/005-eco-car.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Transport</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Läs mer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top cardImg" src="img/028-recycle.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Återvinning</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Läs mer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top cardImg" src="img/036-windmill.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Elproduktion</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.</p>
+                                <a href="#" class="btn btn-primary">Läs mer</a>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        <div class="row learningButton">
+                <div class="col-12 col-md-12 text-center">
+                        <button type="button" class="btn btn-dark">Start learning</button>
+                </div>
+        </div>
+    </div>
 
     <!-- To use Bootstrap these plugins are needed. (Bootstrap needs these to work)-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -64,6 +139,18 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
+        <script>
+                $(function() {
+                $( '.cardImg' ).hover(
+                function() {
+        $( this ).addClass("animated infinite pulse");
+      }, function() {
+        $( this ).removeClass("animated infinite pulse");
+      }
+    );});
+    
+        </script>
 </body>
 
 </html>
