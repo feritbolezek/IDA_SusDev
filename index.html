@@ -72,15 +72,15 @@
 
     <div class="container-fluid infoContainer">
         <section id="edu">
-        <div class="row">
-            <div class="offset-1 col-11">
-                <p id="eduTitle" class="coloredTitle">UTBILDNINGEN</p>
+            <div class="row">
+                <div class="offset-1 col-11">
+                    <p id="eduTitle" class="coloredTitle">UTBILDNINGEN</p>
+                </div>
+                <div class="offset-1 col-11">
+                    <h3 id="eduSubTitle" class="coloredSubTitle">Består av fyra delkurser</h3>
+                </div>
             </div>
-            <div class="offset-1 col-11">
-                <h3 id="eduSubTitle" class="coloredSubTitle">Består av fyra delkurser</h3>
-            </div>
-        </div>
-    </section>
+        </section>
         <div class="row cardsRow align-items-center">
             <div class="col-12 col-md-3">
                 <div id="cardOne" class="card" style="width: 18rem;">
@@ -130,8 +130,10 @@
         <div class="row learningButton">
             <div class="col-12 col-md-12 text-center">
                 <button type="button" class="btn btn-dark">Start learning</button>
+                <div class="divider"></div>
             </div>
         </div>
+        <!-- <div class="container">
         <div class="row">
                 <div class="col-7">
                         <canvas id="indexChart">
@@ -144,6 +146,30 @@
                     <h3 class="coloredSubTitle">Ger dig en överblick av området</h3>
                 </div>
             </div>
+        </div>-->
+
+        <div class="container infographContainer">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="container">
+                        <canvas id="indexChart">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="container">
+                        <div>
+                            <p class="coloredTitle">DELKURSER</p>
+                        </div>
+                        <div>
+                            <h3 class="coloredSubTitle">Ger dig en överblick av området</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
     <!-- To use Bootstrap these plugins are needed. (Bootstrap needs these to work)-->
@@ -153,7 +179,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-            <!-- Chart.js is used to create awesome looking charts.-->
+    <!-- Chart.js is used to create awesome looking charts.-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
 
     <script src="js/InViewport.js"></script>

@@ -77,3 +77,16 @@ h1 {
     margin: auto;
     margin-top: 32px;
 }
+
+.infographContainer {
+    margin-top: 20vh;
+}
+
+.divider {
+    height: 2px;
+    background-color: salmon;
+    opacity: 0.25;
+    width: 40%;
+    margin: auto;
+    margin-top: 10vh;
+}
