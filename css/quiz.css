@@ -1,0 +1,84 @@
+body {
+    background-image: url("../img/LandscapeBG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.NavLink {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.leftBar {
+    background-color: salmon;
+
+}
+
+.midSection {
+ background-color: white;
+ border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.rightBar {
+    background-color: white;
+
+}
+
+.hiddenBar {
+    visibility: hidden;
+}
+
+.visibleBar {
+    visibility: visible;
+}
+
+.question {
+    margin:auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+}
+
+.questionImage {
+    display: block;
+    margin:auto;
+    max-height: 150px;
+}
+.questionImageContainer {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.choice {
+    text-align: center;
+    padding: 8%;
+    color: white;
+    margin: 2%;
+}
+
+#choiceOne {
+    background-color: rgba(46, 204, 113,1.0);
+}
+
+#choiceTwo {
+    background-color: rgba(52, 152, 219,1.0);
+}
+
+#choiceThree {
+    background-color: rgba(155, 89, 182,1.0);
+}
+
+#choiceFour {
+    background-color: rgba(231, 76, 60,1.0);
+}
+
+
+.choiceText {
+    margin: auto;
+    font-size: 30px;
+}
+
+.choice:hover {
+    filter: brightness(0.8);
+}
