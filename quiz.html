@@ -95,22 +95,22 @@
                                 <div class="row">
                                         <div class="col-6">
                                             <div id="choiceOne" class="choice" onclick="selectionMade(this)">
-                                                <p class="choiceText">VAL A</p>
+                                                <p id="choiceOneText" class="choiceText">VAL A</p>
                                             </div>
                                             </div>
                                             <div class="col-6">
                                                     <div id="choiceTwo" class="choice" onclick="selectionMade(this)">
-                                                    <p class="choiceText">VAL B</p>
+                                                    <p id="choiceTwoText" class="choiceText">VAL B</p>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                     <div id="choiceThree" class="choice" onclick="selectionMade(this)">
-                                                    <p class="choiceText">VAL C</p>
+                                                    <p id="choiceThreeText" class="choiceText">VAL C</p>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                     <div id="choiceFour" class="choice" onclick="selectionMade(this)">
-                                                    <p class="choiceText">VAL D</p>
+                                                    <p id="choiceFourText" class="choiceText">VAL D</p>
                                                 </div>
                                             </div>
                                 </div>
@@ -158,9 +158,10 @@
         function continueClicked() {
             if($("#continueBtn").hasClass("disabled")) return;
             else {
-                console.log("Ok!!");
+                answerSubmitted();
             }
         }
+
     </script>
 
 </body>
