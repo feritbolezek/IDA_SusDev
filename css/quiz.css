@@ -142,6 +142,41 @@ body {
     filter: brightness(0.7);
 }
 
+.courseImg {
+    width: 120px;
+    display: block;
+    margin: auto;
+    margin-top: 16px;
+    border-radius: 60px;
+
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.80, #27ae60), color-stop(0.20, #2ecc71));
+padding: 2px;
+}
+
+.quizTitle {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.numberOfQuestions {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.quizBarButtonRow {
+    margin-top: 32px;
+}
+
+.timer {
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
 .noselect {  /* This code make it so that text is not selectable. */
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */

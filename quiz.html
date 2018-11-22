@@ -62,15 +62,15 @@
         <div class="row">
             <div class="col-1 leftBar">
                 <div class="container sideContainer">
-                            <p class="backBtn"> <a href="quizSelection.html" class="stylizedLink">Back</a></p>
-                            <a href="quiz.html?q=elproduktion"><img src="img/Elprod.png" class="sideQuickLink"></a>
-                            <p class="sideQuickLinkText">Elproduk.</p>
-                            <a href="quiz.html?q=livsmedel"><img src="img/livsmedel.png" class="sideQuickLink"></a>
-                            <p class="sideQuickLinkText">Livsmedel</p>
-                            <a href="quiz.html?q=transport"><img src="img/Transport.png" class="sideQuickLink"></a>
-                            <p class="sideQuickLinkText">Transport</p>
-                            <a href="quiz.html?q=atervinning"><img src="img/Recycle.png" class="sideQuickLink"></a>
-                            <p class="sideQuickLinkText">Återvinn.</p>
+                    <p class="backBtn"> <a href="quizSelection.html" class="stylizedLink">Back</a></p>
+                    <a href="quiz.html?q=elproduktion"><img src="img/Elprod.png" class="sideQuickLink"></a>
+                    <p class="sideQuickLinkText">Elproduk.</p>
+                    <a href="quiz.html?q=livsmedel"><img src="img/livsmedel.png" class="sideQuickLink"></a>
+                    <p class="sideQuickLinkText">Livsmedel</p>
+                    <a href="quiz.html?q=transport"><img src="img/Transport.png" class="sideQuickLink"></a>
+                    <p class="sideQuickLinkText">Transport</p>
+                    <a href="quiz.html?q=atervinning"><img src="img/Recycle.png" class="sideQuickLink"></a>
+                    <p class="sideQuickLinkText">Återvinn.</p>
                 </div>
             </div>
             <div class="col-8 midSection">
@@ -116,6 +116,44 @@
                 </div>
             </div>
             <div class="col-3 rightBar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="img/Elprod.png" class="courseImg">
+                        </div>
+                        <div class="col-12">
+                            <h3 class="quizTitle">Elproduktion</h3>
+                        </div>
+                        <div class="col-12">
+                            <p class="timer"></p>
+                        </div>
+                        <div class="col-12">
+                            <div class="col-12">
+                                <p class="numberOfQuestions">Antal frågor: 6</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 17%;border-right: 1px solid white;" aria-valuenow="15"
+                                    aria-valuemin="0" aria-valuemax="100">1/6</div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;"
+                                    aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;" aria-valuenow="20"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;" aria-valuenow="20"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;" aria-valuenow="20"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 17%" aria-valuenow="20"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                                <button type="button" class="btn btn-primary" style="margin-top:32px; padding-right: 18px;">Starta om</button>
+                        </div>
+                        <div class="col-6">
+                                <button type="button" class="btn btn-danger" style="margin-top:32px;">Avsluta quiz</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -147,7 +185,16 @@
     <script src="js/Quiz.js"></script>
 
     <script>
-    $(function () {
+
+        setInterval(timeIt,1000);
+        var timer = 1000;
+
+        function timeIt() {
+            $(".timer").html(timer);
+            timer--;
+        }
+
+        $(function () {
             $('.sideQuickLink').hover(
                 function () {
                     $(this).addClass("animated infinite pulse");
