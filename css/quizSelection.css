@@ -16,7 +16,7 @@ body {
 
 
 .leftBar {
-    background-color: rgba(26, 188, 156,1.0);
+    background-color:rgba(236, 240, 241,1.0);
 
 }
 
@@ -24,13 +24,13 @@ body {
 }
 
 .midSection {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 1);
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .rightBar {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 1);
     padding: 0;
 }
 
@@ -131,6 +131,7 @@ body {
     margin:16px;
     text-align: center;
     color: white;
+    opacity: 0.9;
 }
 
 .profileAvatar {
@@ -138,10 +139,20 @@ body {
     margin:auto;
 }
 
-.userRow {
+.userContainer {
     background-color: rgba(44, 62, 80,1.0);
     margin: 0;
-    padding-bottom: 128px;
+    padding-bottom: 16px;
+    
+}
+.resultsContainer {
+    background-color: rgba(52, 73, 94,1.0);
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+}
+.userRow {
+    border-bottom: 1px solid rgba(250, 128, 114, 0.2);
 }
 
 #xpBar {
@@ -160,4 +171,42 @@ body {
     font-size: 32px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    opacity: 0.8;
+}
+.resultsTitle {
+    margin-top: 16px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    opacity: 0.8;
+}
+
+.userProgressbar {
+    display: block;
+    margin: auto;
+}
+
+.labelForProgressOne {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
+
+.labelForProgressTwo {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
+
+.labelForProgressThree {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
+
+.labelForProgressFour {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
 }
