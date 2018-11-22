@@ -22,7 +22,7 @@
 <body>
 
     <!-- Nav element linked to classes from Bootstrap. -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html"><img src="img/Logo.png" style="width: 150px" class="img-responsive"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,35 +81,80 @@
                     </div>
                 </div>
             </div>
-            <div class="col-8 midSection">
+            <div class="col-7 midSection">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="headText">Redo att testa dina kunskaper?</h1>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-6">
-                        
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="img/livsmedel.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Livsmedel</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="quiz.html?q=livsmedel" class="btn btn-primary">Starta quiz</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="img/Transport.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Transport</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="quiz.html?q=transport" class="btn btn-primary">Starta quiz</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="img/Recycle.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Återvinning</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="quiz.html?q=atervinning" class="btn btn-primary">Starta quiz</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-6">
-
-                    </div>
-                    <div class="col-6">
-
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="img/Elprod.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Elproduktion</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="quiz.html?q=elproduktion" class="btn btn-primary">Starta quiz</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-2 rightBar">
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
-                <div class="col-8">Quiz</div>
+            <div class="col-3 rightBar">
+                <div class="container-fluid userRow">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="username">John Snow</h1>
+                        </div>
+                        <div class="col-12">
+                            <img class="profileAvatar" src="img/Creative-Tail-People-woen-2.svg">
+                        </div>
+                        <div class="col-12">
+                            <div id="xpBar"></div>
+                        </div>
+                        <div class="col-12">
+                            <p id="xpAmount">2100/3000</p>
+                        </div>
+                        <div class="col-12">
+                                <p id="currentLevel">Nivå 3: Expert</p>
+                            </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -121,7 +166,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="js/Quiz.js"></script>
+    <!--<script src="js/Quiz.js"></script> -->
 
 
     <script>
@@ -138,6 +183,8 @@
         }
     </script>
 
+    <script src="js/progressbar.js"></script>
+    <script src="js/userProgress.js"></script>
 </body>
 
 </html>

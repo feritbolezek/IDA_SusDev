@@ -2,6 +2,11 @@ body {
     background-image: url("../img/LandscapeBG.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar {
+    opacity: 0.8;
 }
 
 .NavLink {
@@ -15,16 +20,18 @@ body {
 
 }
 
+.mainContainer {
+}
+
 .midSection {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
-
 }
 
 .rightBar {
-    background-color: white;
-
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0;
 }
 
 .hiddenBar {
@@ -107,4 +114,50 @@ body {
 .backBtn {
     color: white;
     font-weight: bold;
+}
+
+.card {
+    margin:auto;
+    margin-top: 10%;
+}
+
+.headText {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.username {
+    margin:16px;
+    text-align: center;
+    color: white;
+}
+
+.profileAvatar {
+    display: block;
+    margin:auto;
+}
+
+.userRow {
+    background-color: rgba(44, 62, 80,1.0);
+    margin: 0;
+    padding-bottom: 128px;
+}
+
+#xpBar {
+    margin-top: 16px;
+}
+
+#xpAmount {
+    color: white;
+    opacity: 0.6;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#currentLevel {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
