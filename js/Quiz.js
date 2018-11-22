@@ -62,5 +62,6 @@ function selectionWasMade(selection) {
         $("#"+lastChoice).removeClass("choiceSelected");
     }
     
+    $("#continueBtn").removeClass("disabled");
     lastChoice = selection.id;
 }
