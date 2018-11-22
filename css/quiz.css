@@ -15,7 +15,6 @@ body {
 
 .leftBar {
     background-color: rgba(26, 188, 156,1.0);
-
 }
 
 .midSection {
@@ -107,9 +106,40 @@ body {
     margin-bottom: 10%;
 }
 
+.sideQuickLink {
+    width: 50px;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .backBtn {
     color: white;
     font-weight: bold;
+    margin-top: 16px;
+    font-size: 20px;
+}
+
+.stylizedLink {
+    color: white;
+    text-align: center;
+}
+.sideContainer {
+    padding: 0;
+    text-align: center;
+}
+
+.stylizedLink:hover {
+    color: lightgray;
+}
+
+.sideQuickLinkText {
+    color: white;
+    text-align: center;
+}
+
+.hoveredDark {
+    filter: brightness(0.7);
 }
 
 .noselect {  /* This code make it so that text is not selectable. */

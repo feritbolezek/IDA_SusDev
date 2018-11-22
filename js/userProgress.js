@@ -3,7 +3,7 @@ var bar = new ProgressBar.Line(container, {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 3000,
-    color: '#FFEA82', //  Main color of the bar
+    color: '#16a085', //  Main color of the bar
     trailColor: '#eee', // Setting trail (The bar behind the fill)
     trailWidth: 1,
     svgStyle: {
