@@ -14,7 +14,6 @@ body {
     font-weight: bold;
 }
 
-
 .leftBar {
     background-color:rgba(236, 240, 241,1.0);
 
@@ -217,6 +216,8 @@ body {
     margin-top: 8px;
     color: white;
 }
+
+/* Footer below */
 
 .footer {
     background-color: white;

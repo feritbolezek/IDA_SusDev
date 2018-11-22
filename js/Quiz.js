@@ -90,6 +90,7 @@ function loadQuestions(course) {
     $("#choiceTwoText").html(currentCourseQuestions[0]["choice2"]);
     $("#choiceThreeText").html(currentCourseQuestions[0]["choice3"]);
     $("#choiceFourText").html(currentCourseQuestions[0]["choice4"]);
+    $(".question").html(currentCourseQuestions[0]["question"]);
 }
 
 
