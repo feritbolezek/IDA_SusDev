@@ -146,7 +146,7 @@ body {
     width: 120px;
     display: block;
     margin: auto;
-    margin-top: 16px;
+    margin-top: 32px;
     border-radius: 60px;
 
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.80, #27ae60), color-stop(0.20, #2ecc71));
@@ -156,8 +156,8 @@ padding: 2px;
 .quizTitle {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-size: 18px;
-    margin-top: 16px;
+    font-size: 20px;
+    margin-top: 32px;
 }
 
 .numberOfQuestions {
@@ -169,9 +169,27 @@ padding: 2px;
     margin-top: 32px;
 }
 
+.socialMediaIconContainer {
+    margin-top: 200px;
+}
+
+.socialMediaIcon {
+    display: block;
+    margin: auto;
+    margin-bottom: 8px;
+    opacity: 0.2;
+    width: 35px;
+}
+
+.socialMediaIcon:hover {
+    -webkit-animation: socialMediaAnim 0.5s linear;
+    animation-fill-mode: forwards;
+ 
+}
+
 .timer {
     margin-top: 32px;
-    font-size: 26px;
+    font-size: 42px;
     margin-bottom: 16px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -223,5 +241,15 @@ padding: 2px;
 
     to {
         -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes socialMediaAnim {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1.0;
     }
 }

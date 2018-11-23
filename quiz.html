@@ -125,7 +125,7 @@
                             <h3 class="quizTitle">Elproduktion</h3>
                         </div>
                         <div class="col-12">
-                            <p class="timer"></p>
+                            <p class="timer">-</p>
                         </div>
                         <div class="col-12">
                             <div class="col-12">
@@ -151,6 +151,14 @@
                         </div>
                         <div class="col-6">
                                 <button type="button" class="btn btn-danger" style="margin-top:32px;">Avsluta quiz</button>
+                        </div>
+                        <div class="container socialMediaIconContainer">
+                            <div class="row">
+                                <div class="col-3"><img src="img/facebook.png" class="socialMediaIcon"></div>
+                                <div class="col-3"><img src="img/instagram.png" class="socialMediaIcon"></div>
+                                <div class="col-3"><img src="img/share.png" class="socialMediaIcon"></div>
+                                <div class="col-3"><img src="img/twitter.png" class="socialMediaIcon"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,12 +194,23 @@
 
     <script>
 
-        setInterval(timeIt,1000);
-        var timer = 1000;
+        var interval = setInterval(timeIt,1000);
+        var timer = 3600;
+
+        var minutes = 0;
+        var seconds = 0;
 
         function timeIt() {
-            $(".timer").html(timer);
+            if (timer % 60 === 0) {
+                minutes = (timer/60) - 1;
+            }
+            seconds = timer % 60;
+            $(".timer").html(minutes + ':' + seconds);
             timer--;
+            if (timer === -1) {
+                $(".timer").html('0' + ':' + '0');
+                clearInterval(interval);
+            }
         }
 
         $(function () {
