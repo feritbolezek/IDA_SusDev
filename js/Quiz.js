@@ -75,6 +75,7 @@ function answerSubmitted() {
             }
             break;
     }
+    console.log("UPPED!");
     nextQuestion();
 }
 
@@ -85,22 +86,56 @@ function nextQuestion() {
 
 // Loads the variable currentCourseQuesitons with the array that is linked with the current course.
 function loadQuestions(course) {
-    console.log("bip bop");
     switch (course) {
         case "livsmedel":
             currentCourseQuestions = livsmedelQuestions;
+            break;
         case "transport":
             currentCourseQuestions = transportQuestions;
+            break;
         case "atervinning":
             currentCourseQuestions = atervinningQuestions;
+            break;
         case "elproduktion":
             currentCourseQuestions = elproduktionQuestions;
+            break;
     }
     $("#choiceOneText").html(currentCourseQuestions[currentQuestion]["choice1"]);
     $("#choiceTwoText").html(currentCourseQuestions[currentQuestion]["choice2"]);
     $("#choiceThreeText").html(currentCourseQuestions[currentQuestion]["choice3"]);
     $("#choiceFourText").html(currentCourseQuestions[currentQuestion]["choice4"]);
     $(".question").html(currentCourseQuestions[currentQuestion]["question"]);
+    console.log("got in! " + currentQuestion );
+    switch (currentQuestion) {
+        case 0:
+        $("#questOneLbl").html("1/6");
+        break;
+        case 1:
+        $("#questOneLbl").html("");
+        $("#questTwoLbl").html("2/6");
+        $("#progressbarTwo").removeClass("bg-secondary");
+        break;
+        case 2:
+        $("#questTwoLbl").html("");
+        $("#questThreeLbl").html("3/6");
+        $("#progressbarThree").removeClass("bg-secondary");
+        break;
+        case 3:
+        $("#questThreeLbl").html("");
+        $("#questFourLbl").html("4/6");
+        $("#progressbarFour").removeClass("bg-secondary");
+        break;
+        case 4:
+        $("#questFourLbl").html("");
+        $("#questFiveLbl").html("5/6");
+        $("#progressbarFive").removeClass("bg-secondary");
+        break;
+        case 5:
+        $("#questFiveLbl").html("");
+        $("#questSixLbl").html("6/6");
+        $("#progressbarSix").removeClass("bg-secondary");
+        break;
+    }
 }
 
 
@@ -120,6 +155,38 @@ var livsmedelQuestions = [{
         choice3: "Malmö",
         choice4: "Jakarta",
         answer: "Malmö"
+    },
+    {
+        question: "Best burger place?",
+        choice1: "Burger King",
+        choice2: "Mc'Donalds",
+        choice3: "KFC",
+        choice4: "Home",
+        answer: "Home"
+    },
+    {
+        question: "Best PC game?",
+        choice1: "Counter Strike",
+        choice2: "League of Legends",
+        choice3: "World of Warcraft",
+        choice4: "Fortnite",
+        answer: "League of Legends"
+    },
+    {
+        question: "Best programming language?",
+        choice1: "Java",
+        choice2: "Python",
+        choice3: "C#",
+        choice4: "C++",
+        answer: "C#"
+    },
+    {
+        question: "What is the music of life?",
+        choice1: "Maracas",
+        choice2: "Bananas",
+        choice3: "Mozart",
+        choice4: "Silence, my brother.",
+        answer: "Silence, my brother."
     }
 ];
 
