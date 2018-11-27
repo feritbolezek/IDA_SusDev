@@ -6,6 +6,10 @@ var currentCourseQuestions = null;
 
 var points = 0;
 
+var currentQuestion = 0; // 6 question, meaning it will go from 0 to 5.
+
+var fromCourse;
+
 // Checking from where we came. If it was from a course,
 // then we can start displaying the quiz for it.
 
@@ -13,7 +17,7 @@ $(document).ready(function () {
 
     if (document.location.href.includes("?")) {
         // Great!
-        var fromCourse = document.location.href.split('=').pop().toString();
+        fromCourse = document.location.href.split('=').pop().toString();
         console.log(fromCourse);
         loadQuestions(fromCourse);
     } else {
@@ -47,30 +51,36 @@ function selectionWasMade(selection) {
 function answerSubmitted() {
     switch (lastChoice) {
         case "choiceOne":
-            if (currentCourseQuestions[0]["choice1"] === currentCourseQuestions[0]["answer"]) {
+            if (currentCourseQuestions[currentQuestion]["choice1"] === currentCourseQuestions[currentQuestion]["answer"]) {
                 points++;
                 console.log("Point up!");
             }
             break;
         case "choiceTwo":
-            if (currentCourseQuestions[0]["choice2"] === currentCourseQuestions[0]["answer"]) {
+            if (currentCourseQuestions[currentQuestion]["choice2"] === currentCourseQuestions[currentQuestion]["answer"]) {
                 points++;
                 console.log("Point up!");
             }
             break;
         case "choiceThree":
-            if (currentCourseQuestions[0]["choice3"] === currentCourseQuestions[0]["answer"]) {
+            if (currentCourseQuestions[currentQuestion]["choice3"] === currentCourseQuestions[currentQuestion]["answer"]) {
                 points++;
                 console.log("Point up!");
             }
             break;
         case "choiceFour":
-            if (currentCourseQuestions[0]["choice4"] === currentCourseQuestions[0]["answer"]) {
+            if (currentCourseQuestions[currentQuestion]["choice4"] === currentCourseQuestions[currentQuestion]["answer"]) {
                 points++;
                 console.log("Point up!");
             }
             break;
     }
+    nextQuestion();
+}
+
+function nextQuestion() {
+    currentQuestion++;
+    loadQuestions(fromCourse);
 }
 
 // Loads the variable currentCourseQuesitons with the array that is linked with the current course.
@@ -86,11 +96,11 @@ function loadQuestions(course) {
         case "elproduktion":
             currentCourseQuestions = elproduktionQuestions;
     }
-    $("#choiceOneText").html(currentCourseQuestions[0]["choice1"]);
-    $("#choiceTwoText").html(currentCourseQuestions[0]["choice2"]);
-    $("#choiceThreeText").html(currentCourseQuestions[0]["choice3"]);
-    $("#choiceFourText").html(currentCourseQuestions[0]["choice4"]);
-    $(".question").html(currentCourseQuestions[0]["question"]);
+    $("#choiceOneText").html(currentCourseQuestions[currentQuestion]["choice1"]);
+    $("#choiceTwoText").html(currentCourseQuestions[currentQuestion]["choice2"]);
+    $("#choiceThreeText").html(currentCourseQuestions[currentQuestion]["choice3"]);
+    $("#choiceFourText").html(currentCourseQuestions[currentQuestion]["choice4"]);
+    $(".question").html(currentCourseQuestions[currentQuestion]["question"]);
 }
 
 
