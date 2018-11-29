@@ -40,12 +40,12 @@
                         <span class="NavLink">Kurser</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Livsmedel</a>
-                        <a class="dropdown-item" href="#">Transport</a>
-                        <a class="dropdown-item" href="#">Återvinning</a>
-                        <a class="dropdown-item" href="#">Elproduktion</a>
+                        <a class="dropdown-item" href="">Livsmedel</a>
+                        <a class="dropdown-item" href="">Transport</a>
+                        <a class="dropdown-item" href="">Återvinning</a>
+                        <a class="dropdown-item" href="">Elproduktion</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Fler kurser på väg!</a>
+                        <a class="dropdown-item" href="">Fler kurser på väg!</a>
                     </div>
                 </li>
                 <li class="nav-item active">
@@ -187,6 +187,7 @@
                     </div>
                     <p>Bra jobbat! Du har gått igenom hela quizen!</p>
                     <p class="resultLabel"></p>
+                    <p style="text-align:center;opacity:0.4;"><b>+25xp</b></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" onclick="actionMade('restart')">Spela igen</button>
@@ -223,6 +224,8 @@
     <script src="js/Quiz.js"></script>
 
     <script>
+        console.log("HELLO STORAGE! " + window.localStorage.getItem("lastname"));
+
         var interval = setInterval(timeIt, 1000);
         var timer = 3600;
 

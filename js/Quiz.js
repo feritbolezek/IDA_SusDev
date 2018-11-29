@@ -30,11 +30,9 @@ $(document).ready(function () {
     }
 });
 
-function extractData() {
-}
+function extractData() {}
 
-window.onload = function () {
-}
+window.onload = function () {}
 
 // Just code being executed based on which answer the user chose.
 function selectionWasMade(selection) {
@@ -98,7 +96,6 @@ function loadQuestions(course) {
     }
 
     if (currentQuestion == currentCourseQuestions.length) {
-        console.log("curr: " + currentQuestion);
         displayEndOfQuiz();
         return;
     }
@@ -111,48 +108,64 @@ function loadQuestions(course) {
 
     switch (currentQuestion) {
         case 0:
-        $("#questOneLbl").html("1/6");
-        break;
+            $("#questOneLbl").html("1/6");
+            break;
         case 1:
-        $("#questOneLbl").html("");
-        $("#questTwoLbl").html("2/6");
-        $("#progressbarTwo").removeClass("bg-secondary");
-        break;
+            $("#questOneLbl").html("");
+            $("#questTwoLbl").html("2/6");
+            $("#progressbarTwo").removeClass("bg-secondary");
+            break;
         case 2:
-        $("#questTwoLbl").html("");
-        $("#questThreeLbl").html("3/6");
-        $("#progressbarThree").removeClass("bg-secondary");
-        break;
+            $("#questTwoLbl").html("");
+            $("#questThreeLbl").html("3/6");
+            $("#progressbarThree").removeClass("bg-secondary");
+            break;
         case 3:
-        $("#questThreeLbl").html("");
-        $("#questFourLbl").html("4/6");
-        $("#progressbarFour").removeClass("bg-secondary");
-        break;
+            $("#questThreeLbl").html("");
+            $("#questFourLbl").html("4/6");
+            $("#progressbarFour").removeClass("bg-secondary");
+            break;
         case 4:
-        $("#questFourLbl").html("");
-        $("#questFiveLbl").html("5/6");
-        $("#progressbarFive").removeClass("bg-secondary");
-        break;
+            $("#questFourLbl").html("");
+            $("#questFiveLbl").html("5/6");
+            $("#progressbarFive").removeClass("bg-secondary");
+            break;
         case 5:
-        $("#questFiveLbl").html("");
-        $("#questSixLbl").html("6/6");
-        $("#progressbarSix").removeClass("bg-secondary");
-        break;
+            $("#questFiveLbl").html("");
+            $("#questSixLbl").html("6/6");
+            $("#progressbarSix").removeClass("bg-secondary");
+            break;
     }
 }
 
 function displayEndOfQuiz() {
+
+    saveInformation();
+
     $('.resultLabel').html("Du fick " + "<b>" + points + "</b>" + " av totala " + "<b>" + currentCourseQuestions.length + "</b>" + " poäng!");
 
     for (let index = 1; index < 7; index++) {
         if (index <= points) {
-        $('#star' + index).attr("src","img/StarYellow.png");
+            $('#star' + index).attr("src", "img/StarYellow.png");
         } else {
-        $('#star' + index).attr("src","img/StarGrey.png");
+            $('#star' + index).attr("src", "img/StarGrey.png");
         }
     }
 
     $('.quizFinishedModal').modal('show');
+}
+
+function saveInformation() {
+    
+    window.localStorage.setItem(fromCourse, points); // Save total points received
+
+    var currentXp = window.localStorage.getItem("xp");
+
+    if (currentXp != null) {
+        window.localStorage.setItem("xp", parseInt(currentXp) + 25);
+    } else {
+        window.localStorage.setItem("xp", 25);
+    }
 }
 
 
