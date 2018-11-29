@@ -195,6 +195,47 @@ padding: 2px;
     font-family: 'Poppins', sans-serif;
 }
 
+.star {
+    display: inline-block;
+    margin: auto;
+    width: 50px;
+}
+#star1 {
+    animation-delay: 0.2s;
+}
+#star2 {
+    animation-delay: 0.4s;
+}
+#star3{
+    animation-delay: 0.6s;
+}
+#star4 {
+    animation-delay: 0.8s;
+}
+#star5 {
+    animation-delay: 1.0s;
+}
+#star6 {
+    animation-delay: 1.2s;
+}
+
+.resultLabel {
+    text-align: center;
+}
+
+.modal-body {
+    margin:auto;
+}
+
+.starContainer {
+    width: 100%;
+    display: inline-block;
+    margin:auto;
+    text-align: center;
+    margin-bottom: 32px;
+    margin-top: 16px;
+}
+
 .noselect {  /* This code make it so that text is not selectable. */
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */

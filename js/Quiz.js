@@ -53,25 +53,21 @@ function answerSubmitted() {
         case "choiceOne":
             if (currentCourseQuestions[currentQuestion]["choice1"] === currentCourseQuestions[currentQuestion]["answer"]) {
                 points++;
-                console.log("Point up!");
             }
             break;
         case "choiceTwo":
             if (currentCourseQuestions[currentQuestion]["choice2"] === currentCourseQuestions[currentQuestion]["answer"]) {
                 points++;
-                console.log("Point up!");
             }
             break;
         case "choiceThree":
             if (currentCourseQuestions[currentQuestion]["choice3"] === currentCourseQuestions[currentQuestion]["answer"]) {
                 points++;
-                console.log("Point up!");
             }
             break;
         case "choiceFour":
             if (currentCourseQuestions[currentQuestion]["choice4"] === currentCourseQuestions[currentQuestion]["answer"]) {
                 points++;
-                console.log("Point up!");
             }
             break;
     }
@@ -100,12 +96,19 @@ function loadQuestions(course) {
             currentCourseQuestions = elproduktionQuestions;
             break;
     }
+
+    if (currentQuestion == currentCourseQuestions.length) {
+        console.log("curr: " + currentQuestion);
+        displayEndOfQuiz();
+        return;
+    }
+
     $("#choiceOneText").html(currentCourseQuestions[currentQuestion]["choice1"]);
     $("#choiceTwoText").html(currentCourseQuestions[currentQuestion]["choice2"]);
     $("#choiceThreeText").html(currentCourseQuestions[currentQuestion]["choice3"]);
     $("#choiceFourText").html(currentCourseQuestions[currentQuestion]["choice4"]);
     $(".question").html(currentCourseQuestions[currentQuestion]["question"]);
-    console.log("got in! " + currentQuestion );
+
     switch (currentQuestion) {
         case 0:
         $("#questOneLbl").html("1/6");
@@ -136,6 +139,20 @@ function loadQuestions(course) {
         $("#progressbarSix").removeClass("bg-secondary");
         break;
     }
+}
+
+function displayEndOfQuiz() {
+    $('.resultLabel').html("Du fick " + "<b>" + points + "</b>" + " av totala " + "<b>" + currentCourseQuestions.length + "</b>" + " poäng!");
+
+    for (let index = 1; index < 7; index++) {
+        if (index <= points) {
+        $('#star' + index).attr("src","img/StarYellow.png");
+        } else {
+        $('#star' + index).attr("src","img/StarGrey.png");
+        }
+    }
+
+    $('.quizFinishedModal').modal('show');
 }
 
 

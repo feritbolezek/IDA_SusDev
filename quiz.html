@@ -132,25 +132,26 @@
                                 <p class="numberOfQuestions">Antal frågor: 6</p>
                             </div>
                             <div class="progress">
-                                <div id="progressbarOne" class="progress-bar" role="progressbar" style="width: 17%;border-right: 1px solid white;" aria-valuenow="15"
-                                    aria-valuemin="0" aria-valuemax="100"><span id="questOneLbl"></span></div>
+                                <div id="progressbarOne" class="progress-bar" role="progressbar" style="width: 17%;border-right: 1px solid white;"
+                                    aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"><span id="questOneLbl"></span></div>
                                 <div id="progressbarTwo" class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;"
                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"><span id="questTwoLbl"></span></div>
-                                <div id="progressbarThree" class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;" aria-valuenow="20"
-                                    aria-valuemin="0" aria-valuemax="100"><span id="questThreeLbl"></span></div>
-                                <div id="progressbarFour" class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;" aria-valuenow="20"
-                                    aria-valuemin="0" aria-valuemax="100"><span id="questFourLbl"></span></div>
-                                <div id="progressbarFive" class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;" aria-valuenow="20"
-                                    aria-valuemin="0" aria-valuemax="100"><span id="questFiveLbl"></span></div>
-                                <div id="progressbarSix" class="progress-bar bg-secondary" role="progressbar" style="width: 17%" aria-valuenow="20"
-                                    aria-valuemin="0" aria-valuemax="100"><span id="questSixLbl"></span></div>
+                                <div id="progressbarThree" class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span id="questThreeLbl"></span></div>
+                                <div id="progressbarFour" class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span id="questFourLbl"></span></div>
+                                <div id="progressbarFive" class="progress-bar bg-secondary" role="progressbar" style="width: 17%;border-right: 1px solid white;"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span id="questFiveLbl"></span></div>
+                                <div id="progressbarSix" class="progress-bar bg-secondary" role="progressbar" style="width: 17%"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span id="questSixLbl"></span></div>
                             </div>
                         </div>
                         <div class="col-6">
-                                <button type="button" class="btn btn-primary" style="margin-top:32px; padding-right: 18px;">Starta om</button>
+                            <button type="button" class="btn btn-primary" style="margin-top:32px; padding-right: 18px;">Starta
+                                om</button>
                         </div>
                         <div class="col-6">
-                                <button type="button" class="btn btn-danger" style="margin-top:32px;">Avsluta quiz</button>
+                            <button type="button" class="btn btn-danger" style="margin-top:32px;">Avsluta quiz</button>
                         </div>
                         <div class="container socialMediaIconContainer">
                             <div class="row">
@@ -161,6 +162,35 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal quizFinishedModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quiz resultat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="actionMade('quit')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="starContainer">
+                        <img id="star1" class="star animated bounceIn slow" src="img/StarYellow.png">
+                        <img id="star2" class="star animated bounceIn slow" src="img/StarYellow.png">
+                        <img id="star3" class="star animated bounceIn slow" src="img/StarYellow.png">
+                        <img id="star4" class="star animated bounceIn slow" src="img/StarYellow.png">
+                        <img id="star5" class="star animated bounceIn slow" src="img/StarGrey.png">
+                        <img id="star6" class="star animated bounceIn slow" src="img/StarGrey.png">
+                    </div>
+                    <p>Bra jobbat! Du har gått igenom hela quizen!</p>
+                    <p class="resultLabel"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="actionMade('restart')">Spela igen</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="actionMade('quit')">Avsluta</button>
                 </div>
             </div>
         </div>
@@ -193,8 +223,7 @@
     <script src="js/Quiz.js"></script>
 
     <script>
-
-        var interval = setInterval(timeIt,1000);
+        var interval = setInterval(timeIt, 1000);
         var timer = 3600;
 
         var minutes = 0;
@@ -202,7 +231,7 @@
 
         function timeIt() {
             if (timer % 60 === 0) {
-                minutes = (timer/60) - 1;
+                minutes = (timer / 60) - 1;
             }
             seconds = timer % 60;
             $(".timer").html(minutes + ':' + seconds);
@@ -228,15 +257,27 @@
     </script>
 
     <script>
+
+        // Called once one of the 4 choices has been marked. It further calls functions in Quiz.js
         function selectionMade(obj) {
             $(obj).addClass("choiceSelected");
             selectionWasMade(obj);
         }
-
+        
+        // Called once the blue continue button has been clicked. It further calls functions in Quiz.js
         function continueClicked() {
             if ($("#continueBtn").hasClass("disabled")) return;
             else {
                 answerSubmitted();
+            }
+        }
+
+        // Passing in the next action we're going to make.
+        function actionMade(cont) {
+            if (cont === "restart") {
+                window.location = "quiz.html?q=" + fromCourse;
+            } else {
+                window.location = "quizSelection.html";
             }
         }
     </script>
