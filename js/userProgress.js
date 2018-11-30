@@ -1,5 +1,14 @@
+
+var currXp = window.localStorage.getItem("xp");
+var livsmedelScore = window.localStorage.getItem("livsmedel");
+var transportScore = window.localStorage.getItem("transport");
+var atervinningScore = window.localStorage.getItem("atervinning");
+var elproduktionScore = window.localStorage.getItem("elproduktion");
+
+
+
 var container = document.getElementById("xpBar");
-var bar = new ProgressBar.Line(container, {
+var xpbar = new ProgressBar.Line(container, {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 3000,
@@ -35,7 +44,13 @@ var bar = new ProgressBar.Line(container, {
     }
 });
 
-bar.animate(0.7); // Animating up to the desired value.
+if (currXp != null) {
+    $("#xpAmount").html(currXp + "/3000"); // Setting current xp of total, the total is hardcoded, and will not be implemented as a feature.
+    xpbar.animate(((100/3000) * currXp) / 100); // Updating the bar in userProgress.js
+} else {
+    $("#xpAmount").html("0/3000");
+    xpbar.animate(0.0001); // If we haven't played before, we still animate the bar so it's barely visible.
+}
 
 // $(".progressbar-text").css("font-family", "'Poppins', sans-serif");
 
@@ -45,7 +60,7 @@ bar.animate(0.7); // Animating up to the desired value.
 
 var containerOne = document.getElementById("progressOne");
 
-var barOne = new ProgressBar.Circle(containerOne, {
+var livsmedelBar = new ProgressBar.Circle(containerOne, {
     color: '#aaa',
     // This has to be the same size as the maximum width to
     // prevent clipping
@@ -82,10 +97,10 @@ var barOne = new ProgressBar.Circle(containerOne, {
 
     }
 });
-barOne.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-barOne.text.style.fontSize = '2rem';
+livsmedelBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+livsmedelBar.text.style.fontSize = '2rem';
 
-barOne.animate(0.34); // Number from 0.0 to 1.0
+livsmedelBar.animate(0.34); // Number from 0.0 to 1.0
 
 
 
@@ -93,7 +108,7 @@ barOne.animate(0.34); // Number from 0.0 to 1.0
 
 var containerTwo = document.getElementById("progressTwo");
 
-var barTwo = new ProgressBar.Circle(containerTwo, {
+var transportBar = new ProgressBar.Circle(containerTwo, {
     color: '#aaa',
     // This has to be the same size as the maximum width to
     // prevent clipping
@@ -130,10 +145,10 @@ var barTwo = new ProgressBar.Circle(containerTwo, {
 
     }
 });
-barTwo.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-barTwo.text.style.fontSize = '2rem';
+transportBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+transportBar.text.style.fontSize = '2rem';
 
-barTwo.animate(0.68); // Number from 0.0 to 1.0
+transportBar.animate(0.68); // Number from 0.0 to 1.0
 // 6 question, 100/6 = 17       4*17 = 68    68 / 100 = 0.68
 
 
@@ -141,7 +156,7 @@ barTwo.animate(0.68); // Number from 0.0 to 1.0
 
 var containerThree = document.getElementById("progressThree");
 
-var barThree = new ProgressBar.Circle(containerThree, {
+var atervinningBar = new ProgressBar.Circle(containerThree, {
     color: '#aaa',
     // This has to be the same size as the maximum width to
     // prevent clipping
@@ -178,10 +193,10 @@ var barThree = new ProgressBar.Circle(containerThree, {
 
     }
 });
-barThree.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-barThree.text.style.fontSize = '2rem';
+atervinningBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+atervinningBar.text.style.fontSize = '2rem';
 
-barThree.animate(0.34); // Number from 0.0 to 1.0
+atervinningBar.animate(0.34); // Number from 0.0 to 1.0
 
 
 
@@ -189,7 +204,7 @@ barThree.animate(0.34); // Number from 0.0 to 1.0
 
 var containerFour = document.getElementById("progressFour");
 
-var barFour = new ProgressBar.Circle(containerFour, {
+var elproduktionBar = new ProgressBar.Circle(containerFour, {
     color: '#aaa',
     // This has to be the same size as the maximum width to
     // prevent clipping
@@ -226,7 +241,7 @@ var barFour = new ProgressBar.Circle(containerFour, {
 
     }
 });
-barFour.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-barFour.text.style.fontSize = '2rem';
+elproduktionBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+elproduktionBar.text.style.fontSize = '2rem';
 
-barFour.animate(0.85); // Number from 0.0 to 1.0
+elproduktionBar.animate(0.85); // Number from 0.0 to 1.0
