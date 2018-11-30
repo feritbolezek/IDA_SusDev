@@ -100,9 +100,12 @@ var livsmedelBar = new ProgressBar.Circle(containerOne, {
 livsmedelBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 livsmedelBar.text.style.fontSize = '2rem';
 
-livsmedelBar.animate(0.34); // Number from 0.0 to 1.0
-
-
+// 6 question, 100/6 = 17    4*17 = 68    68 / 100 = 0.68
+if (livsmedelScore != null) {
+    livsmedelBar.animate(((100/6) * livsmedelScore) / 100); // Updating the bar in userProgress.js
+} else {
+    livsmedelBar.animate(0.0001); // If we haven't played before, we still animate the bar so it's barely visible.
+}
 
 
 
@@ -148,9 +151,12 @@ var transportBar = new ProgressBar.Circle(containerTwo, {
 transportBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 transportBar.text.style.fontSize = '2rem';
 
-transportBar.animate(0.68); // Number from 0.0 to 1.0
-// 6 question, 100/6 = 17       4*17 = 68    68 / 100 = 0.68
 
+if (transportScore != null) {
+    transportBar.animate(((100/6) * transportScore) / 100); // Updating the bar in userProgress.js
+} else {
+    transportBar.animate(0.0001); // If we haven't played before, we still animate the bar so it's barely visible.
+}
 
 
 
@@ -196,10 +202,11 @@ var atervinningBar = new ProgressBar.Circle(containerThree, {
 atervinningBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 atervinningBar.text.style.fontSize = '2rem';
 
-atervinningBar.animate(0.34); // Number from 0.0 to 1.0
-
-
-
+if (atervinningScore != null) {
+    atervinningBar.animate(((100/6) * atervinningScore) / 100); // Updating the bar in userProgress.js
+} else {
+    atervinningBar.animate(0.0001); // If we haven't played before, we still animate the bar so it's barely visible.
+}
 
 
 var containerFour = document.getElementById("progressFour");
@@ -244,4 +251,8 @@ var elproduktionBar = new ProgressBar.Circle(containerFour, {
 elproduktionBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 elproduktionBar.text.style.fontSize = '2rem';
 
-elproduktionBar.animate(0.85); // Number from 0.0 to 1.0
+if (elproduktionScore != null) {
+    elproduktionBar.animate(((100/6) * elproduktionScore) / 100); // Updating the bar in userProgress.js
+} else {
+    elproduktionBar.animate(0.0001); // If we haven't played before, we still animate the bar so it's barely visible.
+}
