@@ -1,0 +1,107 @@
+body {
+    background-image: url("../img/LandscapeBG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.NavLink {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar {
+    opacity: 0.9;
+}
+
+.leftBar {
+    background-color:rgba(236, 240, 241,1.0);
+
+}
+
+.mainContainer {
+    padding: 0;
+    margin: auto;
+    margin: 32px;
+    padding-left: 12px;
+    display: block;
+}
+
+
+.midSection {
+    background-color: rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 32px;
+}
+
+.rightBar {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0;
+}
+
+.username {
+    margin:16px;
+    text-align: center;
+    color: white;
+    opacity: 0.9;
+}
+
+.profileAvatar {
+    display: block;
+    margin:auto;
+}
+
+.userContainer {
+    background-color: rgba(44, 62, 80,1.0);
+    margin: 0;
+    padding-bottom: 16px;
+    
+}
+.resultsContainer {
+    background-color: rgba(52, 73, 94,1.0);
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+    padding-bottom: 86px;
+}
+.userRow {
+    border-bottom: 1px solid rgba(250, 128, 114, 0.2);
+}
+
+/* Footer below */
+
+.footer {
+    background-color: white;
+    padding-top: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+.copyright {
+    text-align: center;
+    opacity: 0.8;
+    padding-bottom: 32px;
+}
+
+.logoFooter {
+    display: block;
+    padding-bottom: 8px;
+}
+
+.bottomBar {
+    width: 100%;
+    height: 5px;
+    background: -webkit-linear-gradient(94deg,#ffc244,#ff6500);
+    -webkit-animation: hue 20s infinite linear;
+}
+
+@-webkit-keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
