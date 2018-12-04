@@ -115,6 +115,10 @@ body {
     display:inline-block;
 }
 
+.collapsable {
+    margin-bottom: 32px;
+}
+
 #contOne {
     background-image: url("../img/earthContent.png");
     background-size: cover;

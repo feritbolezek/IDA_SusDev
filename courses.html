@@ -81,16 +81,40 @@
                 <div class="row textsRow">
                     <div class="container boxContainer">
                         <div class="row">
-                        <div class="col-4 infoBox">
-                        <img src="img/eagle.png" class="infoBoxImg">
-                        <p class="infoBoxText">Skriven av John Appleseed</p>
-                        <p class="infoBoxText">2018-12-03 13:21</p>
+                            <div class="col-4 infoBox">
+                                <img src="img/eagle.png" class="infoBoxImg">
+                                <p class="infoBoxText">Skriven av John Appleseed</p>
+                                <p class="infoBoxText">2018-12-03 13:21</p>
+                            </div>
+                            <div id="contOne" class="col-8 contentBox">
+                                <p class="contentBoxInnerText">What is Lorem Ipsum?</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="collapse collapsable" id="collapseExample">
+                                    <div class="card card-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                                              deserunt mollit anim id est laborum.<br><br>
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                                              deserunt mollit anim id est laborum.<br><br>
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                                              deserunt mollit anim id est laborum.<br><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="contOne" class="col-8 contentBox">
-                        <p class="contentBoxInnerText">What is Lorem Ipsum?</p>
-                    </div>
-                </div>
-                </div>
                     <div class="col-4 infoBox">
                         <img src="img/leaves.png" class="infoBoxImg">
                         <p class="infoBoxText">Skriven av John Appleseed</p>
@@ -101,7 +125,7 @@
                     </div>
 
                     <div class="col-4 infoBox">
-                        <img src="img/recycle.png" class="infoBoxImg">
+                        <img src="img/recycleLogo.png" class="infoBoxImg">
                         <p class="infoBoxText">Skriven av John Appleseed</p>
                         <p class="infoBoxText">2018-12-03 13:21</p>
                     </div>
@@ -227,16 +251,17 @@
         crossorigin="anonymous"></script>
 
     <script>
-    /*    $(function () {
-            $('#contOne').hover(
+            $(function () {
+            $('#contOne').click(
                 function () {
-                    $(this).addClass("animated infinite pulse");
-                },
-                function () {
-                    $(this).removeClass("animated infinite pulse");
+                    if ($('.collapse').hasClass("show")) {
+                        $('.collapse').collapse("hide");
+                    } else {
+                    $('.collapse').collapse("show");
+                    }
                 }
             );
-        });*/
+        });
     </script>
 </body>
 
