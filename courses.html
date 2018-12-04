@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
 
-        <!-- Here bootstrap is included to use their css code, it simplifies the creation of responsive websites.-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/courses.css">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
 
-        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <!-- Here bootstrap is included to use their css code, it simplifies the creation of responsive websites.-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/courses.css">
 
-    </head>
-    <body>
-        
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
-            <!-- Nav element linked to classes from Bootstrap. -->
+    <!-- Importing library of animations. Used to simplify animation creation.-->
+    <link rel="stylesheet" href="css/animate.css">
+
+</head>
+
+<body>
+
+
+    <!-- Nav element linked to classes from Bootstrap. -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index:100">
         <a class="navbar-brand" href="index.html"><img src="img/Logo.png" style="width: 150px" class="img-responsive"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -69,54 +75,56 @@
             <div class="col-9 midSection">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="headText">Redo att testa dina kunskaper?</h1>
+                        <h1 class="headText">Transport</h1>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="img/livsmedel.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Livsmedel</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="quiz.html?q=livsmedel" class="btn btn-primary">Starta quiz</a>
-                            </div>
-                        </div>
+                <div class="row textsRow">
+                    <div class="container boxContainer">
+                        <div class="row">
+                        <div class="col-4 infoBox">
+                        <img src="img/eagle.png" class="infoBoxImg">
+                        <p class="infoBoxText">Skriven av John Appleseed</p>
+                        <p class="infoBoxText">2018-12-03 13:21</p>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="img/Transport.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Transport</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="quiz.html?q=transport" class="btn btn-primary">Starta quiz</a>
-                            </div>
-                        </div>
+                    <div id="contOne" class="col-8 contentBox">
+                        <p class="contentBoxInnerText">What is Lorem Ipsum?</p>
+                    </div>
+                </div>
+                </div>
+                    <div class="col-4 infoBox">
+                        <img src="img/leaves.png" class="infoBoxImg">
+                        <p class="infoBoxText">Skriven av John Appleseed</p>
+                        <p class="infoBoxText">2018-12-03 13:21</p>
+                    </div>
+                    <div id="contTwo" class="col-8 contentBox">
+                        <p class="contentBoxInnerText">What is Lorem Ipsum?</p>
                     </div>
 
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="img/Recycle.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Återvinning</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="quiz.html?q=atervinning" class="btn btn-primary">Starta quiz</a>
-                            </div>
-                        </div>
+                    <div class="col-4 infoBox">
+                        <img src="img/recycle.png" class="infoBoxImg">
+                        <p class="infoBoxText">Skriven av John Appleseed</p>
+                        <p class="infoBoxText">2018-12-03 13:21</p>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="img/Elprod.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Elproduktion</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="quiz.html?q=elproduktion" class="btn btn-primary">Starta quiz</a>
-                            </div>
-                        </div>
+                    <div id="contThree" class="col-8 contentBox">
+                        <p class="contentBoxInnerText">What is Lorem Ipsum?</p>
+                    </div>
+
+                    <div class="col-4 infoBox">
+                        <img src="img/sprout.png" class="infoBoxImg">
+                        <p class="infoBoxText">Skriven av John Appleseed</p>
+                        <p class="infoBoxText">2018-12-03 13:21</p>
+                    </div>
+                    <div id="contFour" class="col-8 contentBox">
+                        <p class="contentBoxInnerText">What is Lorem Ipsum?</p>
+                    </div>
+
+                    <div class="col-4 infoBox">
+                        <img src="img/sun.png" class="infoBoxImg">
+                        <p class="infoBoxText">Skriven av John Appleseed</p>
+                        <p class="infoBoxText">2018-12-03 13:21</p>
+                    </div>
+                    <div id="contFive" class="col-8 contentBox">
+                        <p class="contentBoxInnerText">What is Lorem Ipsum?</p>
                     </div>
                 </div>
             </div>
@@ -210,9 +218,26 @@
         </div>
     </div>
 
-        <!-- To use Bootstrap these plugins are needed. (Bootstrap needs these to work)-->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    </body>
+    <!-- To use Bootstrap these plugins are needed. (Bootstrap needs these to work)-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+    /*    $(function () {
+            $('#contOne').hover(
+                function () {
+                    $(this).addClass("animated infinite pulse");
+                },
+                function () {
+                    $(this).removeClass("animated infinite pulse");
+                }
+            );
+        });*/
+    </script>
+</body>
+
 </html>
