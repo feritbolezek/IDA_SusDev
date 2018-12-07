@@ -169,13 +169,57 @@
                     </p>
                 </div>
             </div>
-                <div class="col-12">
-                    <p class="endingNote">John Appleseed is a writer for Green Enviroment and created this article with <span> <img src="../img/heart.svg" style="width:15px;"></span>.</p>
+            <div class="col-12">
+                <p class="endingNote">John Appleseed is a writer for Green Enviroment and created this article with
+                    <span> <img src="../img/heart.svg" style="width:15px;"></span>.</p>
+            </div>
+            <div class="col-12" style="padding:0">
+                <!-- Removing the inherited small padding from Bootstrap.-->
+                <div class="container-fluid articlesContainer">
+                    <!-- Very own container for the articles area. -->
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="readMoreTab">LÄS MER</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="../img/recycle.png" class="articleThumbnails">
+                            <div>
+                                <p class="articTopic">Livsmedel</p>
+                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <p class="articAuthor">Skriven av John Appleseed</p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <img src="../img/recycle.png" class="articleThumbnails">
+                            <div>
+                                <p class="articTopic">Återvinning</p>
+                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <p class="articAuthor">Skriven av John Appleseed</p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <img src="../img/recycle.png" class="articleThumbnails">
+                            <div>
+                                <p class="articTopic">Elproduktion</p>
+                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <p class="articAuthor">Skriven av John Appleseed</p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <img id="notAvailThumb" src="../img/recycle.png" class="articleThumbnails">
+                            <div>
+                                <p class="articTopic">Transport</p>
+                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <p class="articAuthor">Skriven av John Appleseed</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            
+            </div>
         </div>
 
-        <div class="sidebar"> <!-- This is the small sidebar that scrolls along down with the user.-->
+        <div class="sidebar">
+            <!-- This is the small sidebar that scrolls along down with the user.-->
             <p class="sidebarTitle">Transport</p>
             <img src="../img/facebook.png" id="fbIcon" class="sidebarIcons">
             <img src="../img/twitter.png" id="twitterIcon" class="sidebarIcons">
@@ -207,7 +251,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="js/Quiz.js"></script>
+    <script src="../js/extendedAnimatations.js"></script>
 
     <script>
         var clickedStatusStar = false; // Just a simple boolean to check if the star sidebar btn has been clicked.
@@ -247,15 +291,15 @@
             $('#starIcon').hover(
                 function () {
                     if (!clickedStatusStar) {
-                    $(this).addClass("sidebarIcons");
+                        $(this).addClass("sidebarIcons");
                     }
-                    
+
                 },
                 function () {
                     if (!clickedStatusStar) {
-                    $(this).removeClass("sidebarIcons");
+                        $(this).removeClass("sidebarIcons");
                     }
-                    
+
                 }
             );
         });
@@ -279,18 +323,18 @@
         function fillStar() {
             if (!clickedStatusStar) {
                 clickedStatusStar = true;
-                $("#starIcon").attr("src","../img/StarYellow.png");
-                $("#starIcon").css("opacity","1.0");
+                $("#starIcon").attr("src", "../img/StarYellow.png");
+                $("#starIcon").css("opacity", "1.0");
                 $("#starIcon").removeClass("sidebarIcons");
                 $("#starIcon").addClass("animated 2s pulse");
             } else {
                 clickedStatusStar = false;
-                $("#starIcon").attr("src","../img/StarGrey.png");
-                $("#starIcon").css("opacity","0.4");
+                $("#starIcon").attr("src", "../img/StarGrey.png");
+                $("#starIcon").css("opacity", "0.4");
                 $("#starIcon").addClass("animated 2s pulse");
             }
-                
-            }
+
+        }
 
         // Passing in the next action we're going to make.
         function actionMade(cont) {
@@ -300,6 +344,30 @@
                 window.location = "quizSelection.html";
             }
         }
+    </script>
+
+    <script>
+        var checkBottom = false;
+
+        $(window).scroll(function (e) {
+
+            // Check if we reached bottom of the document. Epsilion set to 300 px.
+            if (($("html").scrollTop() > ($(document).height() - $(window).height()) - 300) && checkBottom ==
+                false) {
+                checkBottom = true;
+
+                $(".sidebar").animateCss('fadeOutLeft', function () {
+                    $(".sidebar").css("display", "none");
+                });
+            } else if (($("html").scrollTop() < ($(document).height() - $(window).height()) - 300) &&
+                checkBottom == true) {
+
+                console.log("Yeeee");
+                $(".sidebar").css("display", "");
+                $(".sidebar").animateCss('fadeInLeft');
+                checkBottom = false;
+            }
+        });
     </script>
 
 </body>
