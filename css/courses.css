@@ -119,6 +119,10 @@ body {
     margin-bottom: 32px;
 }
 
+#mainSideText {
+    text-align: center;
+}
+
 .noselect {  /* This code make it so that text is not selectable. */
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -166,8 +170,8 @@ body {
 }
 
 .textsRow {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 /* Footer below */
