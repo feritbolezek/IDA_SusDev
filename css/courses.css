@@ -67,8 +67,65 @@ body {
     border-bottom: 1px solid rgba(250, 128, 114, 0.2);
 }
 
-.headText {
+#xpBar {
+    margin-top: 16px;
+}
+
+#xpAmount {
+    color: white;
+    opacity: 0.6;
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
+}
+
+#currentLevel {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.8;
+}
+.resultsTitle {
+    margin-top: 16px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    opacity: 0.8;
+}
+
+.userProgressbar {
+    display: block;
+    margin: auto;
+}
+
+.labelForProgressOne {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
+
+.labelForProgressTwo {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
+
+.labelForProgressThree {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
+
+.labelForProgressFour {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
+
+.headText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
     margin-top: 16px;
     margin-bottom: 16px;
     text-align: center;

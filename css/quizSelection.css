@@ -40,85 +40,13 @@ body {
     visibility: visible;
 }
 
-.question {
-    margin: auto;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 26px;
-    margin-bottom: 2%;
-}
 
-.questionImage {
-    display: block;
-    margin: auto;
-    max-height: 150px;
-}
-
-.questionImageContainer {
-    margin-top: 32px;
-    margin-bottom: 32px;
-}
-
-.choice {
-    text-align: center;
-    padding: 8%;
-    color: white;
-    margin: 3%;
-}
-
-#choiceOne {
-    background-color: rgba(46, 204, 113, 1.0);
-    border-radius: 5px;
-}
-
-#choiceTwo {
-    background-color: rgba(52, 152, 219, 1.0);
-    border-radius: 5px;
-}
-
-#choiceThree {
-    background-color: rgba(155, 89, 182, 1.0);
-    border-radius: 5px;
-}
-
-#choiceFour {
-    background-color: rgba(231, 76, 60, 1.0);
-    border-radius: 5px;
-}
-
-
-.choiceText {
-    margin: auto;
-    font-size: 30px;
-}
 .mainContainer {
     padding: 0;
     margin: auto;
     margin: 32px;
     padding-left: 12px;
     display: block;
-}
-
-.choice:hover {
-    filter: brightness(0.8);
-}
-
-.choiceSelected {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-    transform: scale(1.05);
-}
-
-.continueBtn {
-    display: block;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 10%;
-}
-
-.backBtn {
-    color: white;
-    font-weight: bold;
 }
 
 .card {
