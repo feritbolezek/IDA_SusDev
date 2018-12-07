@@ -108,6 +108,15 @@
     opacity: 0.5;
 }
 
+.endingNote {
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 12px;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+}
+
 .sidebarIcons:hover {
     -webkit-animation: sidebarIconsAnim 0.5s linear;
     animation-fill-mode: forwards;
