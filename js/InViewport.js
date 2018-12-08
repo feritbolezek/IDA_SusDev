@@ -73,3 +73,57 @@ $("#cardFour").inViewport(function (px) {
     }
 });
 
+$("#delkurserTitle").inViewport(function (px) {
+
+    if (px) {
+        $(this).addClass("animated 2 fadeInRight delay-1s");
+    } else {
+
+    }
+});
+
+$("#delkurserSubTitle").inViewport(function (px) {
+
+    if (px) {
+        $(this).addClass("animated 2 fadeInRight delay-2s");
+    } else {
+
+    }
+});
+
+$("#chartContainer").inViewport(function (px) {
+
+    if (px) {
+        $(this).addClass("animated 2 fadeIn delay-1s");
+    } else {
+
+    }
+});
+
+$("#quizTitle").inViewport(function (px) {
+
+    if (px) {
+        $(this).addClass("animated 2 fadeInLeft delay-1s");
+    } else {
+
+    }
+});
+
+$("#quizSubTitle").inViewport(function (px) {
+
+    if (px) {
+        $(this).addClass("animated 2 fadeInLeft delay-2s");
+    } else {
+
+    }
+});
+
+$(".quizImg").inViewport(function (px) {
+
+    if (px) {
+        $(this).addClass("animated 2 fadeIn delay-2s");
+    } else {
+
+    }
+});
+

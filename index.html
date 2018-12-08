@@ -26,10 +26,10 @@
         <a class="navbar-brand" href="index.html"><img src="img/Logo.png" style="width: 150px" class="img-responsive"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <span class="navbar-toggler-icon"></span> 
+        </button> <!-- A "Collapsable button". This button will show once the viewport gets smaller Ex. Mobile devices. -->
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Also Collapsable Ex. Will show once the button above has been clicked. -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#"><span class="NavLink">Hem</span> <span class="sr-only">(current)</span></a>
@@ -46,32 +46,31 @@
             </ul>
         </div>
     </nav>
-    <div class="jumbotronContainer d-flex align-items-center">
-        <div class="container text-center">
-            <!-- Color animate this -->
+    <div class="jumbotronContainer d-flex align-items-center"> <!-- Center point of index. The attention grabber. Using Bootstrap D-flex and align-items-center, for centering.-->
+        <div class="container text-center"> <!-- text-center is also from Bootstrap, it simplifies centering of text. -->
             <h1 class="text-center sloganText">Vi lär dig <br>Hållbar utveckling!</h1>
         </div>
     </div>
-    <div class="arrowContainer d-flex align-items-center">
+    <div class="arrowContainer d-flex align-items-center"> <!-- Another container for the small arrow pointing down. Once again centering.-->
         <div class="container text-center">
             <!-- Example use of animate.css below. We pass in parameters as: animated, infinite(loop) and bounce(type of animation)-->
             <a href="#edu"><img src="img/arrowSalmon.png" class="img-responsive bouncyBtn animated infinite bounce"></a>
         </div>
     </div>
 
-    <div class="container-fluid infoContainer">
-        <section id="edu">
-            <div class="row">
+    <div class="container-fluid infoContainer"> <!-- Container-fluid comes from Bootstrap and is basically a stretched container. -->
+        <section id="edu"> <!-- Section is used here as scrolling has been set to smooth and upon scrolling it will scroll to this section.-->
+            <div class="row"> <!-- A row contains columns, this is the standard setup of Bootstraps popular grid system. -->
                 <div class="offset-1 col-11">
                     <p id="eduTitle" class="coloredTitle">UTBILDNINGEN</p>
                 </div>
-                <div class="offset-1 col-11">
+                <div class="offset-1 col-11"> <!-- Offseting with 1 column. -->
                     <h3 id="eduSubTitle" class="coloredSubTitle">Består av fyra delkurser</h3>
                 </div>
             </div>
         </section>
         <div class="row cardsRow align-items-center">
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-3"> <!-- Setting different column size depending on screen size. -->
                 <div id="cardOne" class="card" style="width: 18rem;">
                     <img class="card-img-top cardImg" src="img/008-gardening.png" alt="Card image cap">
                     <div class="card-body">
@@ -122,25 +121,11 @@
                 <div class="divider"></div>
             </div>
         </div>
-        <!-- <div class="container">
-        <div class="row">
-                <div class="col-7">
-                        <canvas id="indexChart">
-                        </canvas>
-                    </div>
-                <div class="col-3">
-                    <p class="coloredTitle">DELKURSER</p>
-                </div>
-                <div class="col-3">
-                    <h3 class="coloredSubTitle">Ger dig en överblick av området</h3>
-                </div>
-            </div>
-        </div>-->
 
         <div class="container infographContainer">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-6">
-                    <div class="container">
+                    <div id="chartContainer" class="container">
                         <canvas id="indexChart">
                         </canvas>
                     </div>
@@ -148,10 +133,10 @@
                 <div class="col-12 col-md-6 col-lg-6">
                     <div class="container">
                         <div>
-                            <p class="coloredTitle">DELKURSER</p>
+                            <p id="delkurserTitle" class="coloredTitle">DELKURSER</p>
                         </div>
                         <div>
-                            <h3 class="coloredSubTitle">Ger dig en överblick av området</h3>
+                            <h3 id="delkurserSubTitle" class="coloredSubTitle">Ger dig en överblick av området</h3>
                         </div>
                     </div>
                 </div>
@@ -159,18 +144,20 @@
             </div>
         </div>
         <div class="divider"></div>
-        <div class="container infographContainer">
+        <div class="container-fluid" style="padding:0">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-6">
+                    <div class="col-12 col-md-5 col-lg-5">
                         <div class="container">
                             <div>
-                                <p class="coloredTitle">QUIZEN</p>
+                                <p id="quizTitle" class="coloredTitle">QUIZEN</p>
                             </div>
                             <div>
-                                <h3 class="coloredSubTitle">Hjälper dig testa dina kunskaper</h3>
+                                <h3  id="quizSubTitle"class="coloredSubTitle">Hjälper dig testa dina kunskaper</h3>
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-md-7 col-lg-7 quizImg">
+                        </div>
     
                 </div>
             </div>
