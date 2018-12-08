@@ -68,6 +68,7 @@
 
 .bodyTextContainer {
     padding: 32px;
+    text-align: center;
 }
 .bodyText {
     font-family: 'Source Sans Pro', sans-serif;
