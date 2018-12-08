@@ -249,52 +249,52 @@ var livsmedelQuestions = [{
 ];
 
 var transportQuestions = [{
-        question: "In what city was Donald Trump born?",
-        choice1: "Los Angeles",
-        choice2: "New York City",
-        choice3: "Chicago",
-        choice4: "Toronto",
-        answer: "New York City"
+        question: "Är det en hållbar utvecklig att samhället slutar använda snabb transport rakt av?",
+        choice1: "Ja, för miljön blir bra",
+        choice2: "Ja, det är det ända ekologiskt hållbara",
+        choice3: "Ja, för temporaturen är viktigast",
+        choice4: "Nej, samhället kräver en viss rörlighet för ekonomin",
+        answer: "Nej, samhället kräver en viss rörlighet för ekonomin"
     },
     {
-        question: "In what city was Ferit born?",
-        choice1: "Istanbul",
-        choice2: "Helsingborg",
-        choice3: "Malmö",
-        choice4: "Jakarta",
-        answer: "Malmö"
+        question: "Vilket samlingsnamn av föreningar påverkar försurning?",
+        choice1: "Kväveoxider",
+        choice2: "Nitrit",
+        choice3: "Svaveloxider",
+        choice4: "Kolväten",
+        answer: "Kväveoxider"
     },
     {
-        question: "Best burger place?",
-        choice1: "Burger King",
-        choice2: "Mc'Donalds",
-        choice3: "KFC",
-        choice4: "Home",
-        answer: "Home"
+        question: "Vilken av följande håller tillbaka elbilar?",
+        choice1: "Pris",
+        choice2: "Utseende",
+        choice3: "Livslängd",
+        choice4: "Högt ljud",
+        answer: "Pris"
     },
     {
-        question: "Best PC game?",
-        choice1: "Counter Strike",
-        choice2: "League of Legends",
-        choice3: "World of Warcraft",
-        choice4: "Fortnite",
-        answer: "League of Legends"
+        question: "Vad är den huvudsakligt begränsande faktorn för biogas av dessa alternativ?",
+        choice1: "Begräsningar inom mobilitet",
+        choice2: "Mängd material att tillverka det av",
+        choice3: "Ojämn tillgång året runt",
+        choice4: "Biogas är nära kopplat till cancer",
+        answer: "Begräsningar inom mobilitet"
     },
     {
-        question: "Best programming language?",
-        choice1: "Java",
-        choice2: "Python",
-        choice3: "C#",
-        choice4: "C++",
-        answer: "C#"
+        question: "Varför kan AI vara bra i trafiken?",
+        choice1: "Bra för miljö och säkert",
+        choice2: "Kör långsamt och drar ner hastigheten på vägarna",
+        choice3: "Ingen av de andra trafikanterna kan krocka",
+        choice4: "Tutar vilt för att kontrollera alla andra trafikanter",
+        answer: "Bra för miljö och säkert"
     },
     {
-        question: "What is the music of life?",
-        choice1: "Maracas",
-        choice2: "Bananas",
-        choice3: "Mozart",
-        choice4: "Silence, my brother.",
-        answer: "Silence, my brother."
+        question: "Varför är säkerheten från AI bra för miljön?",
+        choice1: "Mindre nya bilar behöver tillverkas",
+        choice2: "Människor blir mer utvilade",
+        choice3: "Skapar inte aggression i trafiken",
+        choice4: "För man kan prata i telefon medan man kör",
+        answer: "Mindre nya bilar behöver tillverkas"
     }
 ];
 
