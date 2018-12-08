@@ -61,6 +61,10 @@ body {
     padding: 8%;
     color: white;
     margin: 3%;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column; /* column | row */
 }
 
 #choiceOne {

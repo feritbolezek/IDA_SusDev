@@ -106,6 +106,8 @@ function loadQuestions(course) {
     $("#choiceFourText").html(currentCourseQuestions[currentQuestion]["choice4"]);
     $(".question").html(currentCourseQuestions[currentQuestion]["question"]);
 
+    checkHeights();
+
     switch (currentQuestion) {
         case 0:
             $("#questOneLbl").html("1/6");
@@ -156,7 +158,7 @@ function displayEndOfQuiz() {
 }
 
 function saveInformation() {
-    
+
     window.localStorage.setItem(fromCourse, points); // Save total points received
 
     var currentXp = window.localStorage.getItem("xp");
@@ -168,6 +170,32 @@ function saveInformation() {
     }
 }
 
+function checkHeights() {
+
+    var heights = [$("#choiceOneText").height(),
+        $("#choiceTwoText").height(),
+        $("#choiceThreeText").height(),
+        $("#choiceFourText").height()
+    ];
+
+    var greatestHeight = 0;
+
+    heights.forEach(element => {  // Run this foreach loop to find which choice is the largest height.
+        if (element > greatestHeight) {
+            greatestHeight = element;
+        }
+    });
+
+    console.log("Found greatest height! " + greatestHeight);
+
+    // Set all the choices to the greatest height.
+    $("#choiceOne").height(greatestHeight);
+    $("#choiceTwo").height(greatestHeight);
+    $("#choiceThree").height(greatestHeight);
+    $("#choiceFour").height(greatestHeight);
+    
+    greatestHeight = 0; // Reset once done for the upcoming round.
+}
 
 // All the question are grouped here in a few arrays.
 var livsmedelQuestions = [{
@@ -221,151 +249,151 @@ var livsmedelQuestions = [{
 ];
 
 var transportQuestions = [{
-    question: "In what city was Donald Trump born?",
-    choice1: "Los Angeles",
-    choice2: "New York City",
-    choice3: "Chicago",
-    choice4: "Toronto",
-    answer: "New York City"
-},
-{
-    question: "In what city was Ferit born?",
-    choice1: "Istanbul",
-    choice2: "Helsingborg",
-    choice3: "Malmö",
-    choice4: "Jakarta",
-    answer: "Malmö"
-},
-{
-    question: "Best burger place?",
-    choice1: "Burger King",
-    choice2: "Mc'Donalds",
-    choice3: "KFC",
-    choice4: "Home",
-    answer: "Home"
-},
-{
-    question: "Best PC game?",
-    choice1: "Counter Strike",
-    choice2: "League of Legends",
-    choice3: "World of Warcraft",
-    choice4: "Fortnite",
-    answer: "League of Legends"
-},
-{
-    question: "Best programming language?",
-    choice1: "Java",
-    choice2: "Python",
-    choice3: "C#",
-    choice4: "C++",
-    answer: "C#"
-},
-{
-    question: "What is the music of life?",
-    choice1: "Maracas",
-    choice2: "Bananas",
-    choice3: "Mozart",
-    choice4: "Silence, my brother.",
-    answer: "Silence, my brother."
-}
+        question: "In what city was Donald Trump born?",
+        choice1: "Los Angeles",
+        choice2: "New York City",
+        choice3: "Chicago",
+        choice4: "Toronto",
+        answer: "New York City"
+    },
+    {
+        question: "In what city was Ferit born?",
+        choice1: "Istanbul",
+        choice2: "Helsingborg",
+        choice3: "Malmö",
+        choice4: "Jakarta",
+        answer: "Malmö"
+    },
+    {
+        question: "Best burger place?",
+        choice1: "Burger King",
+        choice2: "Mc'Donalds",
+        choice3: "KFC",
+        choice4: "Home",
+        answer: "Home"
+    },
+    {
+        question: "Best PC game?",
+        choice1: "Counter Strike",
+        choice2: "League of Legends",
+        choice3: "World of Warcraft",
+        choice4: "Fortnite",
+        answer: "League of Legends"
+    },
+    {
+        question: "Best programming language?",
+        choice1: "Java",
+        choice2: "Python",
+        choice3: "C#",
+        choice4: "C++",
+        answer: "C#"
+    },
+    {
+        question: "What is the music of life?",
+        choice1: "Maracas",
+        choice2: "Bananas",
+        choice3: "Mozart",
+        choice4: "Silence, my brother.",
+        answer: "Silence, my brother."
+    }
 ];
 
 var atervinningQuestions = [{
-    question: "Varför återvinner man aluminium?",
-    choice1: "Finns brist på bauxit",
-    choice2: "För att framställning av aluminium ur bauxit är mycket energikrävande",
-    choice3: "För att få bättre egenskaper",
-    choice4: " Ingen av de tre svaren",
-    answer: "För att framställning av aluminium ur bauxit är mycket energikrävande"
-},
-{
-    question: "Hur många kwh fossilt bränsle behövs för att producera ett ton aluminium?",
-    choice1: "Noll",
-    choice2: "Femtusen",
-    choice3: "Tiotusen",
-    choice4: "Tjugotusen",
-    answer: "Tiotusen"
-},
-{
-    question: "Vilka två viktiga skäl gällande generell återvinning förekommer i texten?",
-    choice1: "Brist på en viss råvara",
-    choice2: "Svaret på a och c",
-    choice3: "Återvinningen blir oftast billigare än utvinning av samma material på nytt",
-    choice4: "Ingen av dem",
-    answer: "Svaret på a och c"
-},
-{
-    question: "Vilken produkt har den näst lägsta procentuella andelen återvunnet material år 2015?",
-    choice1: "Pantburkar",
-    choice2: "Plast och metall",
-    choice3: "Aluminium",
-    choice4: "Plast",
-    answer: "Plast"
-},
-{
-    question: "Vilket år reglerades lagen om producentansvaret gällande batterier i Sverige?",
-    choice1: "2001",
-    choice2: "2009",
-    choice3: "2008",
-    choice4: "1996",
-    answer: "2009"
-},
-{
-    question: "Varför är det förbjudet att deponera plast idag?",
-    choice1: "För att den tar mycket plast",
-    choice2: "De tar mycket plats och orsakar dålig lukt",
-    choice3: "För att det är en effektiv metod",
-    choice4: "För att det tar plats, orsakar dålig lukt och metangasbildning",
-    answer: "För att det tar plats, orsakar dålig lukt och metangasbildning"
-}
+        question: "Varför återvinner man aluminium?",
+        choice1: "Finns brist på bauxit",
+        choice2: "För att framställning av aluminium ur bauxit är mycket energikrävande",
+        choice3: "För att få bättre egenskaper",
+        choice4: " Ingen av de tre svaren",
+        answer: "För att framställning av aluminium ur bauxit är mycket energikrävande"
+    },
+    {
+        question: "Hur många kwh fossilt bränsle behövs för att producera ett ton aluminium?",
+        choice1: "Noll",
+        choice2: "Femtusen",
+        choice3: "Tiotusen",
+        choice4: "Tjugotusen",
+        answer: "Tiotusen"
+    },
+    {
+        question: "Vilka två viktiga skäl gällande generell återvinning förekommer i texten?",
+        choice1: "Brist på en viss råvara",
+        choice2: "Svaret på a och c",
+        choice3: "Återvinningen blir oftast billigare än utvinning av samma material på nytt",
+        choice4: "Ingen av dem",
+        answer: "Svaret på a och c"
+    },
+    {
+        question: "Vilken produkt har den näst lägsta procentuella andelen återvunnet material år 2015?",
+        choice1: "Pantburkar",
+        choice2: "Plast och metall",
+        choice3: "Aluminium",
+        choice4: "Plast",
+        answer: "Plast"
+    },
+    {
+        question: "Vilket år reglerades lagen om producentansvaret gällande batterier i Sverige?",
+        choice1: "2001",
+        choice2: "2009",
+        choice3: "2008",
+        choice4: "1996",
+        answer: "2009"
+    },
+    {
+        question: "Varför är det förbjudet att deponera plast idag?",
+        choice1: "För att den tar mycket plast",
+        choice2: "De tar mycket plats och orsakar dålig lukt",
+        choice3: "För att det är en effektiv metod",
+        choice4: "För att det tar plats, orsakar dålig lukt och metangasbildning",
+        answer: "För att det tar plats, orsakar dålig lukt och metangasbildning"
+    }
 ];
 
 var elproduktionQuestions = [{
-    question: "In what city was Donald Trump born?",
-    choice1: "Los Angeles",
-    choice2: "New York City",
-    choice3: "Chicago",
-    choice4: "Toronto",
-    answer: "New York City"
-},
-{
-    question: "In what city was Ferit born?",
-    choice1: "Istanbul",
-    choice2: "Helsingborg",
-    choice3: "Malmö",
-    choice4: "Jakarta",
-    answer: "Malmö"
-},
-{
-    question: "Best burger place?",
-    choice1: "Burger King",
-    choice2: "Mc'Donalds",
-    choice3: "KFC",
-    choice4: "Home",
-    answer: "Home"
-},
-{
-    question: "Best PC game?",
-    choice1: "Counter Strike",
-    choice2: "League of Legends",
-    choice3: "World of Warcraft",
-    choice4: "Fortnite",
-    answer: "League of Legends"
-},
-{
-    question: "Best programming language?",
-    choice1: "Java",
-    choice2: "Python",
-    choice3: "C#",
-    choice4: "C++",
-    answer: "C#"
-},
-{
-    question: "What is the music of life?",
-    choice1: "Maracas",
-    choice2: "Bananas",
-    choice3: "Mozart",
-    choice4: "Silence, my brother.",
-    answer: "Silence, my brother."
-}
+        question: "In what city was Donald Trump born?",
+        choice1: "Los Angeles",
+        choice2: "New York City",
+        choice3: "Chicago",
+        choice4: "Toronto",
+        answer: "New York City"
+    },
+    {
+        question: "In what city was Ferit born?",
+        choice1: "Istanbul",
+        choice2: "Helsingborg",
+        choice3: "Malmö",
+        choice4: "Jakarta",
+        answer: "Malmö"
+    },
+    {
+        question: "Best burger place?",
+        choice1: "Burger King",
+        choice2: "Mc'Donalds",
+        choice3: "KFC",
+        choice4: "Home",
+        answer: "Home"
+    },
+    {
+        question: "Best PC game?",
+        choice1: "Counter Strike",
+        choice2: "League of Legends",
+        choice3: "World of Warcraft",
+        choice4: "Fortnite",
+        answer: "League of Legends"
+    },
+    {
+        question: "Best programming language?",
+        choice1: "Java",
+        choice2: "Python",
+        choice3: "C#",
+        choice4: "C++",
+        answer: "C#"
+    },
+    {
+        question: "What is the music of life?",
+        choice1: "Maracas",
+        choice2: "Bananas",
+        choice3: "Mozart",
+        choice4: "Silence, my brother.",
+        answer: "Silence, my brother."
+    }
 ];
