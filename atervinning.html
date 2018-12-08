@@ -39,8 +39,8 @@
                     <a class="nav-link" href="index.html"><span class="NavLink">Hem</span> <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="courses.html"><span class="NavLink">Kurser</span> </a>
-                    </li>
+                    <a class="nav-link" href="courses.html"><span class="NavLink">Kurser</span> </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span class="NavLink">Quiz</span> </a>
                 </li>
@@ -171,26 +171,38 @@
                             <p class="readMoreTab">LÄS MER</p>
                         </div>
                         <div class="col-3">
-                            <img src="img/recycle.png" class="articleThumbnails">
+                            <a href="transport.html"><img src="img/Transport.png" class="articleThumbnails"></a>
                             <div>
-                                <p class="articTopic">Livsmedel</p>
-                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <a class="bottomLinks" href="transport.html">
+                                    <p class="articTopic">Transport</p>
+                                </a>
+                                <a class="bottomLinks" href="transport.html">
+                                    <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                </a>
                                 <p class="articAuthor">Skriven av John Appleseed</p>
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="img/recycle.png" class="articleThumbnails">
+                            <a href="elproduktion.html"><img src="img/Elprod.png" class="articleThumbnails"></a>
                             <div>
-                                <p class="articTopic">Återvinning</p>
-                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <a class="bottomLinks" href="elproduktion.html">
+                                    <p class="articTopic">Elproduktion</p>
+                                </a>
+                                <a class="bottomLinks" href="elproduktion.html">
+                                    <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                </a>
                                 <p class="articAuthor">Skriven av John Appleseed</p>
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="img/recycle.png" class="articleThumbnails">
+                            <a href="livsmedel.html"><img src="img/livsmedel.png" class="articleThumbnails"></a>
                             <div>
-                                <p class="articTopic">Elproduktion</p>
-                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <a class="bottomLinks" href="livsmedel.html">
+                                    <p class="articTopic">Livsmedel</p>
+                                </a>
+                                <a class="bottomLinks" href="livsmedel.html">
+                                    <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                </a>
                                 <p class="articAuthor">Skriven av John Appleseed</p>
                             </div>
                         </div>
@@ -210,11 +222,11 @@
 
         <div class="sidebar">
             <!-- This is the small sidebar that scrolls along down with the user.-->
-            <p class="sidebarTitle">Transport</p>
+            <p class="sidebarTitle">Återvinning</p>
             <img src="img/facebook.png" id="fbIcon" class="sidebarIcons">
             <img src="img/twitter.png" id="twitterIcon" class="sidebarIcons">
             <img src="img/StarGrey.png" id="starIcon" onclick="fillStar()">
-            <button type="button" class="btn btn-dark startQuizBtn">Starta quiz</button>
+            <button type="button" class="btn btn-dark startQuizBtn" onclick="redirect()">Starta quiz</button>
         </div>
     </div>
 
@@ -333,6 +345,12 @@
             } else {
                 window.location = "quizSelection.html";
             }
+        }
+    </script>
+
+    <script>
+        function redirect() {
+            window.location.href = "quiz.html?q=atervinning"; // Redirect to quiz with query.
         }
     </script>
 

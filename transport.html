@@ -39,8 +39,8 @@
                     <a class="nav-link" href="index.html"><span class="NavLink">Hem</span> <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="courses.html"><span class="NavLink">Kurser</span> </a>
-                    </li>
+                    <a class="nav-link" href="courses.html"><span class="NavLink">Kurser</span> </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span class="NavLink">Quiz</span> </a>
                 </li>
@@ -171,37 +171,49 @@
                             <p class="readMoreTab">LÄS MER</p>
                         </div>
                         <div class="col-3">
-                            <img src="img/recycle.png" class="articleThumbnails">
+                            <a href="elproduktion.html"><img src="img/Elprod.png" class="articleThumbnails"></a>
                             <div>
-                                <p class="articTopic">Livsmedel</p>
-                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <a class="bottomLinks" href="elproduktion.html">
+                                    <p class="articTopic">Elproduktion</p>
+                                </a>
+                                <a class="bottomLinks" href="elproduktion.html">
+                                    <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                </a>
                                 <p class="articAuthor">Skriven av John Appleseed</p>
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="img/recycle.png" class="articleThumbnails">
+                            <a href="livsmedel.html"><img src="img/livsmedel.png" class="articleThumbnails"></a>
                             <div>
-                                <p class="articTopic">Återvinning</p>
-                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <a class="bottomLinks" href="livsmedel.html">
+                                    <p class="articTopic">Livsmedel</p>
+                                </a>
+                                <a class="bottomLinks" href="livsmedel.html">
+                                    <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                </a>
                                 <p class="articAuthor">Skriven av John Appleseed</p>
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="img/recycle.png" class="articleThumbnails">
+                            <a href="atervinning.html"><img src="img/recycle.png" class="articleThumbnails"></a>
                             <div>
-                                <p class="articTopic">Elproduktion</p>
-                                <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                <a class="bottomLinks" href="atervinning.html">
+                                    <p class="articTopic">Återvinning</p>
+                                </a>
+                                <a class="bottomLinks" href="atervinning.html">
+                                    <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                </a>
                                 <p class="articAuthor">Skriven av John Appleseed</p>
                             </div>
                         </div>
                         <div class="col-3">
-                            <img id="notAvailThumb" src="img/Nuclear.png" class="articleThumbnails">
+                            <a href="livsmedel.html"><img id="notAvailThumb" src="img/Nuclear.png" class="articleThumbnails">
 
-                            <div>
-                                <p class="articTopic">Ny kurs på väg!</p>
-                                <p class="articTitle">Here is another title, this one is for bottom.</p>
-                                <p class="articAuthor">Skriven av John Appleseed</p>
-                            </div>
+                                <div>
+                                    <p class="articTopic">Ny kurs på väg!</p>
+                                    <p class="articTitle">Here is another title, this one is for bottom.</p>
+                                    <p class="articAuthor">Skriven av John Appleseed</p>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -214,7 +226,7 @@
             <img src="img/facebook.png" id="fbIcon" class="sidebarIcons">
             <img src="img/twitter.png" id="twitterIcon" class="sidebarIcons">
             <img src="img/StarGrey.png" id="starIcon" onclick="fillStar()">
-            <button type="button" class="btn btn-dark startQuizBtn">Starta quiz</button>
+            <button type="button" class="btn btn-dark startQuizBtn" onclick="redirect()">Starta quiz</button>
         </div>
     </div>
 
@@ -293,6 +305,12 @@
                 }
             );
         });
+    </script>
+
+    <script>
+        function redirect() {
+            window.location.href = "quiz.html?q=transport"; // Redirect to quiz with query.
+        }
     </script>
 
     <script>

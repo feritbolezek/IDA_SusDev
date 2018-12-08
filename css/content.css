@@ -166,6 +166,10 @@
     filter: brightness(0.8) grayscale(0.7);
 }
 
+.articleThumbnails:hover {
+    border: 3px solid #1abc9c;
+}
+
 .sidebarIcons:hover {
     -webkit-animation: sidebarIconsAnim 0.5s linear;
     animation-fill-mode: forwards;
