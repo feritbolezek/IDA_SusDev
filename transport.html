@@ -10,13 +10,13 @@
     <!-- Here bootstrap is included to use their css code, it simplifies the creation of responsive websites.-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="css/content.css">
 
     <!-- Importing some extra fonts. -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
     <!-- Importing library of animations. Used to simplify animation creation.-->
-    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -27,7 +27,7 @@
 
     <!-- Nav element linked to classes from Bootstrap. -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="z-index:100">
-        <a class="navbar-brand" href="index.html"><img src="../img/Logo.png" style="width: 120px" class="img-responsive"></a>
+        <a class="navbar-brand" href="index.html"><img src="img/Logo.png" style="width: 120px" class="img-responsive"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,21 +38,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html"><span class="NavLink">Hem</span> <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <span class="NavLink">Kurser</span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="courses.html">Livsmedel</a>
-                        <a class="dropdown-item" href="courses.html">Transport</a>
-                        <a class="dropdown-item" href="courses.html">Återvinning</a>
-                        <a class="dropdown-item" href="courses.html">Elproduktion</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="">Fler kurser på väg!</a>
-                    </div>
-                </li>
-                <li class="nav-item active">
+                <li class="nav-item">
+                        <a class="nav-link" href="courses.html"><span class="NavLink">Kurser</span> </a>
+                    </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#"><span class="NavLink">Quiz</span> </a>
                 </li>
                 <li class="nav-item">
@@ -66,7 +55,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="headerImageWrapper">
-                    <img src="../img/earthContent.png" class="headerImage">
+                    <img src="img/earthContent.png" class="headerImage">
                 </div>
             </div>
             <div class="col-12 titlesContainer">
@@ -77,7 +66,7 @@
                 <div class="infoWriter">
                     <p class="writerName">John Appleseed</p>
                     <div class="avatarContainer">
-                        <img src="../img/recycle.png" class="avatar">
+                        <img src="img/recycle.png" class="avatar">
                     </div>
                     <p class="writerDate">7th December 2018</p>
                 </div>
@@ -171,7 +160,7 @@
             </div>
             <div class="col-12">
                 <p class="endingNote">John Appleseed is a writer for Green Enviroment and created this article with
-                    <span> <img src="../img/heart.svg" style="width:15px;"></span>.</p>
+                    <span> <img src="img/heart.svg" style="width:15px;"></span>.</p>
             </div>
             <div class="col-12" style="padding:0">
                 <!-- Removing the inherited small padding from Bootstrap.-->
@@ -182,7 +171,7 @@
                             <p class="readMoreTab">LÄS MER</p>
                         </div>
                         <div class="col-3">
-                            <img src="../img/recycle.png" class="articleThumbnails">
+                            <img src="img/recycle.png" class="articleThumbnails">
                             <div>
                                 <p class="articTopic">Livsmedel</p>
                                 <p class="articTitle">Here is another title, this one is for bottom.</p>
@@ -190,7 +179,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="../img/recycle.png" class="articleThumbnails">
+                            <img src="img/recycle.png" class="articleThumbnails">
                             <div>
                                 <p class="articTopic">Återvinning</p>
                                 <p class="articTitle">Here is another title, this one is for bottom.</p>
@@ -198,7 +187,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="../img/recycle.png" class="articleThumbnails">
+                            <img src="img/recycle.png" class="articleThumbnails">
                             <div>
                                 <p class="articTopic">Elproduktion</p>
                                 <p class="articTitle">Here is another title, this one is for bottom.</p>
@@ -206,7 +195,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <img id="notAvailThumb" src="../img/Nuclear.png" class="articleThumbnails">
+                            <img id="notAvailThumb" src="img/Nuclear.png" class="articleThumbnails">
 
                             <div>
                                 <p class="articTopic">Ny kurs på väg!</p>
@@ -222,9 +211,9 @@
         <div class="sidebar">
             <!-- This is the small sidebar that scrolls along down with the user.-->
             <p class="sidebarTitle">Transport</p>
-            <img src="../img/facebook.png" id="fbIcon" class="sidebarIcons">
-            <img src="../img/twitter.png" id="twitterIcon" class="sidebarIcons">
-            <img src="../img/StarGrey.png" id="starIcon" onclick="fillStar()">
+            <img src="img/facebook.png" id="fbIcon" class="sidebarIcons">
+            <img src="img/twitter.png" id="twitterIcon" class="sidebarIcons">
+            <img src="img/StarGrey.png" id="starIcon" onclick="fillStar()">
             <button type="button" class="btn btn-dark startQuizBtn">Starta quiz</button>
         </div>
     </div>
@@ -232,7 +221,7 @@
     <div class="container-fluid footer">
         <div class="row">
             <div class="col-2">
-                <img src="../img/Logo.png" class="logoFooter" width="100px">
+                <img src="img/Logo.png" class="logoFooter" width="100px">
             </div>
             <div class="col-8">
                 <p class="copyright">Copyright © 2018 Green Enviroment Co.</p>
@@ -252,7 +241,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="../js/extendedAnimatations.js"></script>
+    <script src="js/extendedAnimatations.js"></script>
 
     <script>
         var clickedStatusStar = false; // Just a simple boolean to check if the star sidebar btn has been clicked.
@@ -324,13 +313,13 @@
         function fillStar() {
             if (!clickedStatusStar) {
                 clickedStatusStar = true;
-                $("#starIcon").attr("src", "../img/StarYellow.png");
+                $("#starIcon").attr("src", "img/StarYellow.png");
                 $("#starIcon").css("opacity", "1.0");
                 $("#starIcon").removeClass("sidebarIcons");
                 $("#starIcon").addClass("animated 2s pulse");
             } else {
                 clickedStatusStar = false;
-                $("#starIcon").attr("src", "../img/StarGrey.png");
+                $("#starIcon").attr("src", "img/StarGrey.png");
                 $("#starIcon").css("opacity", "0.4");
                 $("#starIcon").addClass("animated 2s pulse");
             }

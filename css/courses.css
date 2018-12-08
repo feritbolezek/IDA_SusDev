@@ -181,6 +181,13 @@ body {
     text-align: center;
 }
 
+#contOnTheWay {
+    background-image: url("../img/earthContent.png");
+    filter: grayscale(0.4) brightness(0.8);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .noselect {  /* This code make it so that text is not selectable. */
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -197,6 +204,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.contentBox:hover {
+    -webkit-animation: contentHover 1s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+    
 }
 
 #contTwo {
@@ -267,5 +279,15 @@ body {
 
     to {
         -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes contentHover {
+    from {
+        filter: sepia(0);
+    }
+
+    to {
+        filter: sepia(1);
     }
 }
