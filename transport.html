@@ -3,23 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Transport</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
 
     <!-- Here bootstrap is included to use their css code, it simplifies the creation of responsive websites.-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+        <!-- Importing stylesheet for this page. -->
     <link rel="stylesheet" href="css/content.css">
 
     <!-- Importing some extra fonts. -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <!-- Importing library of animations. Used to simplify animation creation.-->
     <link rel="stylesheet" href="css/animate.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 </head>
 
@@ -51,7 +51,7 @@
         </div>
     </nav>
 
-    <div class="container-fluid mainContainer">
+    <div class="container-fluid mainContainer"> 
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="headerImageWrapper">
@@ -244,25 +244,6 @@
 
     <script>
         var clickedStatusStar = false; // Just a simple boolean to check if the star sidebar btn has been clicked.
-
-        var interval = setInterval(timeIt, 1000);
-        var timer = 3600;
-
-        var minutes = 0;
-        var seconds = 0;
-
-        function timeIt() {
-            if (timer % 60 === 0) {
-                minutes = (timer / 60) - 1;
-            }
-            seconds = timer % 60;
-            $(".timer").html(minutes + ':' + seconds);
-            timer--;
-            if (timer === -1) {
-                $(".timer").html('0' + ':' + '0');
-                clearInterval(interval);
-            }
-        }
 
         $(function () {
             $('.sideQuickLink').hover(

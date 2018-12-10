@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Kurser</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
 
     <!-- Here bootstrap is included to use their css code, it simplifies the creation of responsive websites.-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+        <!-- Importing stylesheet for this page. -->
     <link rel="stylesheet" href="css/courses.css">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -50,39 +51,28 @@
         </div>
     </nav>
 
-    <div class="container mainContainer">
-        <div class="row">
-            <!--<div class="col-2 leftBar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-8">
-                            <p class="backBtn">
-                                <a href="quizSelection.html"><span style="font-weight:bolder;">
-                                        <</span> Back</p> </a> </div> <div class="col-8">Quiz
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-            <div class="col-9 midSection">
+    <div class="container mainContainer"> <!-- Creating a container, a row below and a column below. This is to follow bootstrap grid system. -->
+        <div class="row"> 
+            <div class="col-9 midSection">  <!-- The center piece containing all the bars of courses you can click on. -->
                 <div class="row">
                     <div class="col-12">
                         <h1 class="headText">Kurser</h1>
                     </div>
                 </div>
                 <div class="row textsRow">
-                    <div class="container boxContainer">
+                    <div class="container boxContainer"> <!-- Creating a container that will hold information about once course.-->
                         <div class="row">
-                            <div class="col-4 infoBox">
+                            <div class="col-4 infoBox"> <!--The info box contains data about who the author is and when it was written.-->
                                 <img src="img/eagle.png" class="infoBoxImg">
                                 <p class="infoBoxText">Skriven av John Appleseed</p>
                                 <p class="infoBoxText">2018-12-03 13:21</p>
                             </div>
-                            <div id="contOne" class="col-8 contentBox" onclick="containerClicked(this)">
+                            <div id="contOne" class="col-8 contentBox" onclick="containerClicked(this)"> <!-- The content box contains a title and is clickable.-->
                                 <p class="contentBoxInnerText noselect">Elproduktion</p>
                             </div>
                         </div>
                     </div>
-                    <div class="container boxContainer">
+                    <div class="container boxContainer"> <!-- same process goes on below. Multiple times because we have multiple courses.-->
                         <div class="row">
                             <div class="col-4 infoBox">
                                 <img src="img/leaves.png" class="infoBoxImg">
@@ -132,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 rightBar">
+            <div class="col-3 rightBar"> <!-- The right bar here, this contains current xp, level, scores etc.-->
                     <div class="container-fluid userContainer">
                             <div class="row userRow">
                                 <div class="col-12">
@@ -142,7 +132,7 @@
                                     <img class="profileAvatar" src="img/Creative-Tail-People-woen-2.svg">
                                 </div>
                                 <div class="col-12">
-                                    <div id="xpBar"></div>
+                                    <div id="xpBar"></div> <!-- The xp bar (progressbar) which is also animated.-->
                                 </div>
                                 <div class="col-12">
                                     <p id="xpAmount">2100/3000</p>
@@ -158,7 +148,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="container text-center">
-                                            <div id="progressOne"></div>
+                                            <div id="progressOne"></div> <!-- the progress circles will show up in these containers.-->
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -206,7 +196,7 @@
         </div>
     </div>
 
-    <div class="container-fluid footer">
+    <div class="container-fluid footer"> <!-- The footer -->
         <div class="row">
             <div class="col-2">
                 <img src="img/Logo.png" class="logoFooter" width="100px">
@@ -236,7 +226,7 @@
         <script src="js/userProgress.js"></script>
 
     <script>
-        function containerClicked(sender) {
+        function containerClicked(sender) { // If one of the containers are clicked, send the user to the correct article based on which element was clicked.
             switch(sender.id) {
                 case "contOne" :
                     window.location.href = "elproduktion.html";

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Green Enviroment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
 
@@ -14,6 +14,7 @@
     <!-- Importing some extra fonts. -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
+    <!-- Importing stylesheet for this page. -->
     <link rel="stylesheet" href="css/index.css">
 
     <!-- Importing library of animations. Used to simplify animation creation.-->
@@ -61,7 +62,7 @@
     <div class="container-fluid infoContainer"> <!-- Container-fluid comes from Bootstrap and is basically a stretched container. -->
         <section id="edu"> <!-- Section is used here as scrolling has been set to smooth and upon scrolling it will scroll to this section.-->
             <div class="row"> <!-- A row contains columns, this is the standard setup of Bootstraps popular grid system. -->
-                <div class="offset-1 col-11">
+                <div class="offset-1 col-11"> <!-- A row can contain maximum 12 colums, any more than that is displayed on a new line.-->
                     <p id="eduTitle" class="coloredTitle">UTBILDNINGEN</p>
                 </div>
                 <div class="offset-1 col-11"> <!-- Offseting with 1 column. -->
@@ -70,7 +71,7 @@
             </div>
         </section>
         <div class="row cardsRow align-items-center">
-            <div class="col-12 col-md-3"> <!-- Setting different column size depending on screen size. -->
+            <div class="col-12 col-md-3"> <!-- Setting different column size depending on screen size. Ex. col-md-3 is for medium sized screens, col-12 covers all other screen sizes.-->
                 <div id="cardOne" class="card" style="width: 18rem;">
                     <img class="card-img-top cardImg" src="img/008-gardening.png" alt="Card image cap">
                     <div class="card-body">
@@ -115,22 +116,22 @@
                 </div>
             </div>
         </div>
-        <div class="row learningButton">
+        <div class="row learningButton"> <!-- A row containing only a button which link to courses. -->
             <div class="col-12 col-md-12 text-center">
-                <button type="button" class="btn btn-dark">Start learning</button>
+                <a href="courses.html"><button type="button" class="btn btn-dark">Start learning</button></a>
                 <div class="divider"></div>
             </div>
         </div>
 
-        <div class="container infographContainer">
+        <div class="container infographContainer"> <!-- The container which contains the chart-->
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-6">
+                <div class="col-12 col-md-6 col-lg-6"> <!-- Half of the row (col-6) is reserved for the chart-->
                     <div id="chartContainer" class="container">
-                        <canvas id="indexChart">
+                        <canvas id="indexChart"> <!-- The chart is displayed in this canvas-->
                         </canvas>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-6">
+                <div class="col-12 col-md-6 col-lg-6"> <!-- The other half (col-6) is reserved for the texts-->
                     <div class="container">
                         <div>
                             <p id="delkurserTitle" class="coloredTitle">DELKURSER</p>
@@ -143,7 +144,7 @@
 
             </div>
         </div>
-        <div class="divider"></div>
+        <div class="divider"></div> <!-- A simple line which divides to areas. -->
         <div class="container-fluid" style="padding:0">
                 <div class="row">
                     <div class="col-12 col-md-5 col-lg-5">
@@ -156,13 +157,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-7 col-lg-7 quizImg">
+                    <div class="col-12 col-md-7 col-lg-7 quizImg"> <!-- A div which from css has a background image of the quiz.-->
                         </div>
     
                 </div>
             </div>
 
-            <div class="container-fluid footer">
+            <div class="container-fluid footer"> <!-- The footer -->
                     <div class="row">
                         <div class="col-2">
                             <img src="img/Logo.png" class="logoFooter" width="100px">
@@ -192,6 +193,7 @@
     <!-- Chart.js is used to create awesome looking charts.-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
 
+    <!-- Import scripts -->
     <script src="js/InViewport.js"></script>
     <script src="js/centerFinder.js"></script>
     <script src="js/indexChart.js"></script>
@@ -199,12 +201,12 @@
 
     <script>
         $(function () {
-            $('.cardImg').hover(
+            $('.cardImg').hover( // If we hover over the card images, do the code below.
                 function () {
-                    $(this).addClass("animated infinite pulse");
+                    $(this).addClass("animated infinite pulse"); // Do this if hovered over.
                 },
                 function () {
-                    $(this).removeClass("animated infinite pulse");
+                    $(this).removeClass("animated infinite pulse"); // Do this if mouse was removed from hovering.
                 }
             );
         });

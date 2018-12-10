@@ -1,10 +1,10 @@
-var arrivedFromCourse = false;
+var arrivedFromCourse = false; // The course you chose.
 
-var lastChoice = null;
+var lastChoice = null;  // Once you've clicked and selected a answer it will be held temporarily here.
 
-var currentCourseQuestions = null;
+var currentCourseQuestions = null; // The current questions for this course.
 
-var points = 0;
+var points = 0; // Increments as you answer a question correctly.
 
 var currentQuestion = 0; // 6 question, meaning it will go from 0 to 5.
 
@@ -15,22 +15,19 @@ var fromCourse;
 
 $(document).ready(function () {
 
-    if (document.location.href.includes("?")) {
+    if (document.location.href.includes("?")) { // If the url contains a question mark then a query has been passed.
         // Great!
-        fromCourse = document.location.href.split('=').pop().toString();
-        console.log(fromCourse);
-        loadQuestions(fromCourse);
+        fromCourse = document.location.href.split('=').pop().toString(); // Extract the query (course)
+        loadQuestions(fromCourse); // Load questions based on what couse we're on.
     } else {
         $('.leftBar').removeClass("col-2"); // This is not used at the moment due to design changes.
         $('.leftBar').html(""); // It might be removed from the code later on.
-        $('.midSection').removeClass("col-8");
+        $('.midSection').removeClass("col-8"); // This is not necessary but if we arrived here and have no query, swap around the layout.
         $('.midSection').addClass("col-9");
         $('.rightBar').removeClass("col-2");
         $('.rightBar').addClass("col-3");
     }
 });
-
-function extractData() {}
 
 window.onload = function () {}
 
@@ -42,15 +39,15 @@ function selectionWasMade(selection) {
     }
 
     $("#continueBtn").removeClass("disabled");
-    lastChoice = selection.id;
-    console.log("Setting! " + lastChoice);
+    lastChoice = selection.id; // Setting last choice based on users selection.
 }
 
+// Code executed once an answer has been submitted. (Once the user selects an answer and presses continue.)
 function answerSubmitted() {
     switch (lastChoice) {
         case "choiceOne":
             if (currentCourseQuestions[currentQuestion]["choice1"] === currentCourseQuestions[currentQuestion]["answer"]) {
-                points++;
+                points++; // Increment points if it was the correct answer.
             }
             break;
         case "choiceTwo":
@@ -72,6 +69,7 @@ function answerSubmitted() {
     nextQuestion();
 }
 
+// Display next question once one has been answered.
 function nextQuestion() {
     currentQuestion++;
     loadQuestions(fromCourse);
@@ -95,10 +93,11 @@ function loadQuestions(course) {
     }
 
     if (currentQuestion == currentCourseQuestions.length) {
-        displayEndOfQuiz();
+        displayEndOfQuiz(); // If we're at the last question.
         return;
     }
 
+    // Update the answers text to correspond the answers for the current question.
     $("#choiceOneText").html(currentCourseQuestions[currentQuestion]["choice1"]);
     $("#choiceTwoText").html(currentCourseQuestions[currentQuestion]["choice2"]);
     $("#choiceThreeText").html(currentCourseQuestions[currentQuestion]["choice3"]);
@@ -107,6 +106,7 @@ function loadQuestions(course) {
 
     checkHeights();
 
+    // Based on what question it is, update the UI to display that.
     switch (currentQuestion) {
         case 0:
             $("#questOneLbl").html("1/6");
@@ -139,13 +139,15 @@ function loadQuestions(course) {
     }
 }
 
+// Once the quiz is over, display UI that shows total score.
 function displayEndOfQuiz() {
 
     saveInformation();
 
+    // Display text based on how mant questions were answered correctly.
     $('.resultLabel').html("Du fick " + "<b>" + points + "</b>" + " av totala " + "<b>" + currentCourseQuestions.length + "</b>" + " poäng!");
 
-    for (let index = 1; index < 7; index++) {
+    for (let index = 1; index < 7; index++) { // Show amount of stars based on how many questions were answered correctly.
         if (index <= points) {
             $('#star' + index).attr("src", "img/StarYellow.png");
         } else {
@@ -153,9 +155,10 @@ function displayEndOfQuiz() {
         }
     }
 
-    $('.quizFinishedModal').modal('show');
+    $('.quizFinishedModal').modal('show'); // Show the modal box. (End of quiz UI)
 }
 
+// Save data to localStorage
 function saveInformation() {
 
     window.localStorage.setItem(fromCourse, points); // Save total points received
@@ -163,14 +166,17 @@ function saveInformation() {
     var currentXp = window.localStorage.getItem("xp");
 
     if (currentXp != null) {
-        window.localStorage.setItem("xp", parseInt(currentXp) + 25);
+        window.localStorage.setItem("xp", parseInt(currentXp) + 25); // Up the xp by 25. This is hardcoded.
     } else {
         window.localStorage.setItem("xp", 25);
     }
 }
 
+// This functions checks which answer box is the largest and makes all other boxes the same height.
+// This is to make the UI look consistent. Where once box is not smaller/larger than all the others.
 function checkHeights() {
 
+    // get all the heights of the answer boxes.
     var heights = [$("#choiceOneText").height(),
         $("#choiceTwoText").height(),
         $("#choiceThreeText").height(),
@@ -184,8 +190,6 @@ function checkHeights() {
             greatestHeight = element;
         }
     });
-
-    console.log("Found greatest height! " + greatestHeight);
 
     // Set all the choices to the greatest height.
     $("#choiceOne").height(greatestHeight);

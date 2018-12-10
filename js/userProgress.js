@@ -1,20 +1,20 @@
 
-var currXp = window.localStorage.getItem("xp");
-var livsmedelScore = window.localStorage.getItem("livsmedel");
-var transportScore = window.localStorage.getItem("transport");
-var atervinningScore = window.localStorage.getItem("atervinning");
-var elproduktionScore = window.localStorage.getItem("elproduktion");
+var currXp = window.localStorage.getItem("xp"); // Receive all data from localStorage.
+var livsmedelScore = window.localStorage.getItem("livsmedel"); // Receive all data from localStorage.
+var transportScore = window.localStorage.getItem("transport"); // Receive all data from localStorage.
+var atervinningScore = window.localStorage.getItem("atervinning"); // Receive all data from localStorage.
+var elproduktionScore = window.localStorage.getItem("elproduktion"); // Receive all data from localStorage.
 
 
 
-var container = document.getElementById("xpBar");
-var xpbar = new ProgressBar.Line(container, {
+var container = document.getElementById("xpBar"); // Get the xpBar element
+var xpbar = new ProgressBar.Line(container, { // Create a new progressBar of type line.
     strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 3000,
+    easing: 'easeInOut', // The style of animation. Will ease in and then ease out.
+    duration: 3000, // Duration of transformation.
     color: '#16a085', //  Main color of the bar
     trailColor: '#eee', // Setting trail (The bar behind the fill)
-    trailWidth: 1,
+    trailWidth: 1, // Set width of trail
     svgStyle: {
         width: '100%',
         height: '100%'
@@ -34,13 +34,13 @@ var xpbar = new ProgressBar.Line(container, {
         autoStyleContainer: false
     },
     from: {
-        color: '#FFEA82'
+        color: '#FFEA82' // Will animate from this color.
     },
     to: {
-        color: '#ED6A5A'
+        color: '#ED6A5A' // To this color.
     }, //  Main color of the bar , we are chaing during animation.
     step: (state, bar) => {
-        bar.setText(Math.round(bar.value() * 100) + ' %');
+        bar.setText(Math.round(bar.value() * 100) + ' %'); // Will set the text underneath the progressbar to this text. Which based on the current value of the progressbar.
     }
 });
 
@@ -58,9 +58,9 @@ if (currXp != null) {
 // And from here on, everything is the same. I continue to add more bars for every field. Could be automatized
 // but not this time. Not enough time for that.
 
-var containerOne = document.getElementById("progressOne");
+var containerOne = document.getElementById("progressOne"); // Get the element which will be the container for the progress circle.
 
-var livsmedelBar = new ProgressBar.Circle(containerOne, {
+var livsmedelBar = new ProgressBar.Circle(containerOne, { // Create a progressbar of type Circle.
     color: '#aaa',
     // This has to be the same size as the maximum width to
     // prevent clipping
@@ -76,28 +76,28 @@ var livsmedelBar = new ProgressBar.Circle(containerOne, {
         autoStyleContainer: false,
     },
     from: {
-        color: '#e74c3c',
+        color: '#e74c3c', // From this color.
         width: 1
     },
     to: {
-        color: '#e74c3c',
+        color: '#e74c3c', // To this color.
         width: 3
     },
     // Set default step function for all animate calls
     step: function (state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
+        circle.path.setAttribute('stroke', state.color); // Set attributes for the circle, setting stroke here.
+        circle.path.setAttribute('stroke-width', state.width); // And width here.
 
-        var value = Math.round(circle.value() * 6);
+        var value = Math.round(circle.value() * 6); // The value of the bar (progress).
         if (value === 0) {
             circle.setText('');
         } else {
-            circle.setText(value + "/6");
+            circle.setText(value + "/6"); // Based on the value of the circle set the text.
         }
 
     }
 });
-livsmedelBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+livsmedelBar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif'; // Set font of the text.
 livsmedelBar.text.style.fontSize = '2rem';
 
 // 6 question, 100/6 = 17    4*17 = 68    68 / 100 = 0.68
@@ -109,9 +109,9 @@ if (livsmedelScore != null) {
 
 
 
-var containerTwo = document.getElementById("progressTwo");
+var containerTwo = document.getElementById("progressTwo"); // Get element.
 
-var transportBar = new ProgressBar.Circle(containerTwo, {
+var transportBar = new ProgressBar.Circle(containerTwo, { // Create circle progressbar etc...
     color: '#aaa',
     // This has to be the same size as the maximum width to
     // prevent clipping
