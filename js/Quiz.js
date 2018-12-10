@@ -69,7 +69,6 @@ function answerSubmitted() {
             }
             break;
     }
-    console.log("UPPED!");
     nextQuestion();
 }
 
@@ -199,52 +198,52 @@ function checkHeights() {
 
 // All the question are grouped here in a few arrays.
 var livsmedelQuestions = [{
-        question: "In what city was Donald Trump born?",
-        choice1: "Los Angeles",
-        choice2: "New York City",
-        choice3: "Chicago",
-        choice4: "Toronto",
-        answer: "New York City"
+        question: "Vilket av FN:s hållbarhetsmål handlar om hållbara konsumtions- och produktionsmönster?",
+        choice1: "56:e",
+        choice2: "1:a",
+        choice3: "12:e",
+        choice4: "Inget av ovan",
+        answer: "12:e"
     },
     {
-        question: "In what city was Ferit born?",
-        choice1: "Istanbul",
-        choice2: "Helsingborg",
-        choice3: "Malmö",
-        choice4: "Jakarta",
-        answer: "Malmö"
+        question: "Varför är oftast ’hållbara’ produkter dyrare än andra varor?",
+        choice1: "Eftersom företag vill tjäna pengar",
+        choice2: "För att varorna ska vara miljövänliga",
+        choice3: "För att förpackningen ska vara finare",
+        choice4: "Eftersom konsumenten ser fel på priset",
+        answer: "För att varorna ska vara miljövänliga"
     },
     {
-        question: "Best burger place?",
-        choice1: "Burger King",
-        choice2: "Mc'Donalds",
-        choice3: "KFC",
-        choice4: "Home",
-        answer: "Home"
+        question: "Vad kan konsumenten göra för att agera mer hållbart gällande livsmedel?",
+        choice1: "Endast köpa animaliska produkter",
+        choice2: "Köpa varor som är producerade långt ifrån Sverige",
+        choice3: "Köpa jordgubbar under sommarsäsongen",
+        choice4: "Gå ut i skogen och äta löv",
+        answer: "Köpa jordgubbar under sommarsäsongen"
     },
     {
-        question: "Best PC game?",
-        choice1: "Counter Strike",
-        choice2: "League of Legends",
-        choice3: "World of Warcraft",
-        choice4: "Fortnite",
-        answer: "League of Legends"
+        question: "Hur många procent av jordens totala utsläpp av växthusgaser orsakas av animaliska produkter?",
+        choice1: "15%",
+        choice2: "48%",
+        choice3: "25%",
+        choice4: "45%",
+        answer: "15%"
     },
     {
-        question: "Best programming language?",
-        choice1: "Java",
-        choice2: "Python",
-        choice3: "C#",
-        choice4: "C++",
-        answer: "C#"
+        question: "I snitt hur många ton växthusgaser motsvarar den vanliga svenskens kött konsumtion per år?",
+        choice1: "0,5 ton",
+        choice2: "30 ton",
+        choice3: "4 ton",
+        choice4: "8 ton",
+        answer: " 8 ton"
     },
     {
-        question: "What is the music of life?",
-        choice1: "Maracas",
-        choice2: "Bananas",
-        choice3: "Mozart",
-        choice4: "Silence, my brother.",
-        answer: "Silence, my brother."
+        question: "På vilket sätt bidrar animaliska produkter till utsläpp av växthusgaser?",
+        choice1: "För att metan, lustgas och koldioxid frisläpps i samband med produktionen",
+        choice2: "För att djur avlids",
+        choice3: "Dåliga jobbförhållande",
+        choice4: "Inte sant",
+        answer: "För att metan, lustgas och koldioxid frisläpps i samband med produktionen"
     }
 ];
 
