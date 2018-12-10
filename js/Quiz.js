@@ -352,51 +352,51 @@ var atervinningQuestions = [{
 ];
 
 var elproduktionQuestions = [{
-        question: "In what city was Donald Trump born?",
-        choice1: "Los Angeles",
-        choice2: "New York City",
-        choice3: "Chicago",
-        choice4: "Toronto",
-        answer: "New York City"
+        question: "Vad är nackdelen med dagens elproduktion av solenergi?",
+        choice1: "Kostnaden",
+        choice2: "Teknologin är inte tillräckligt utvecklad för att utvinna energi från solen",
+        choice3: "Det är molnigt för ofta",
+        choice4: "Solen är inte tillräckligt stark",
+        answer: "Kostnaden"
     },
     {
-        question: "In what city was Ferit born?",
-        choice1: "Istanbul",
-        choice2: "Helsingborg",
-        choice3: "Malmö",
-        choice4: "Jakarta",
-        answer: "Malmö"
+        question: "Hur mycket kostar el som är producerad från solen?",
+        choice1: "1 cent per kilowattimme",
+        choice2: "5 cent per kilowattimme",
+        choice3: "10 cent per kilowattimme",
+        choice4: "20 cent per kilowattimme",
+        answer: "10 cent per kilowattimme"
     },
     {
-        question: "Best burger place?",
-        choice1: "Burger King",
-        choice2: "Mc'Donalds",
-        choice3: "KFC",
-        choice4: "Home",
-        answer: "Home"
+        question: "Hur effektivt är vindkraftverk jämfört med solpaneler?",
+        choice1: "Båda har samma effektivitet",
+        choice2: "Vindkraftverk är mer effektiva",
+        choice3: "Solpaneler är mer effektiva",
+        choice4: "Ingen av alternativen",
+        answer: "Vindkraftverk är mer effektiva"
     },
     {
-        question: "Best PC game?",
-        choice1: "Counter Strike",
-        choice2: "League of Legends",
-        choice3: "World of Warcraft",
-        choice4: "Fortnite",
-        answer: "League of Legends"
+        question: "På vilket sätt är vindkraftverk ”störande”?",
+        choice1: "De producerar för mycket energi när det blåser",
+        choice2: "De låter när de producerar el",
+        choice3: "De förstör panoraman",
+        choice4: "De får marken att skaka",
+        answer: "De låter när de producerar el"
     },
     {
-        question: "Best programming language?",
-        choice1: "Java",
-        choice2: "Python",
-        choice3: "C#",
-        choice4: "C++",
-        answer: "C#"
+        question: "Vilket av de nämnda kraftverken producerar mest energi i Sverige?",
+        choice1: "Vatten",
+        choice2: "Sol",
+        choice3: "Vind",
+        choice4: "Ingen av alternativen",
+        answer: "Vatten"
     },
     {
-        question: "What is the music of life?",
-        choice1: "Maracas",
-        choice2: "Bananas",
-        choice3: "Mozart",
-        choice4: "Silence, my brother.",
-        answer: "Silence, my brother."
+        question: "Vilket av de nämnda kraftverken producerar den billigaste elen?",
+        choice1: "Vatten",
+        choice2: "Sol",
+        choice3: "Vind",
+        choice4: "Ingen av alternativen",
+        answer: "Vatten"
     }
 ];
